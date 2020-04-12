@@ -188,8 +188,6 @@ Wire Wire Line
 	3900 2200 3900 2300
 Connection ~ 3900 2300
 Wire Wire Line
-	3900 2300 4900 2300
-Wire Wire Line
 	3250 2150 3250 1850
 Wire Wire Line
 	3250 1850 5000 1850
@@ -306,8 +304,6 @@ $EndComp
 Wire Wire Line
 	6500 2050 6400 2050
 Connection ~ 6500 3300
-Wire Wire Line
-	6500 3300 5000 3300
 Connection ~ 6800 3300
 Wire Wire Line
 	6800 3300 6500 3300
@@ -323,8 +319,66 @@ Wire Wire Line
 Wire Wire Line
 	5000 2050 4900 2050
 Wire Wire Line
-	4900 2050 4900 2300
-Connection ~ 4900 2300
+	5000 3300 5150 3300
+$Comp
+L Regulator_Linear:NCP1117-3.3_SOT223 U?
+U 1 1 5E9953A6
+P 5750 3000
+F 0 "U?" H 5750 3242 50  0000 C CNN
+F 1 "NCP1117-3.3_SOT223" H 5750 3151 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5750 3200 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 5850 2750 50  0001 C CNN
+	1    5750 3000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4900 2300 7400 2300
+	3900 2300 5150 2300
+Connection ~ 5750 3300
+Wire Wire Line
+	5750 3300 6200 3300
+Wire Wire Line
+	5450 3000 5150 3000
+Wire Wire Line
+	5150 3000 5150 2300
+Connection ~ 5150 2300
+Wire Wire Line
+	5150 2300 7400 2300
+Wire Wire Line
+	4900 2050 4900 2650
+Wire Wire Line
+	4900 2650 6200 2650
+Wire Wire Line
+	6200 2650 6200 3000
+Wire Wire Line
+	6050 3000 6200 3000
+$Comp
+L Device:C C?
+U 1 1 5E9AEA5E
+P 6200 3150
+F 0 "C?" H 6315 3196 50  0000 L CNN
+F 1 "C" H 6315 3105 50  0000 L CNN
+F 2 "" H 6238 3000 50  0001 C CNN
+F 3 "~" H 6200 3150 50  0001 C CNN
+	1    6200 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6200 3000
+Connection ~ 6200 3300
+Wire Wire Line
+	6200 3300 6500 3300
+$Comp
+L Device:C C?
+U 1 1 5E9AFBC4
+P 5150 3150
+F 0 "C?" H 5265 3196 50  0000 L CNN
+F 1 "C" H 5265 3105 50  0000 L CNN
+F 2 "" H 5188 3000 50  0001 C CNN
+F 3 "~" H 5150 3150 50  0001 C CNN
+	1    5150 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 3000
+Connection ~ 5150 3300
+Wire Wire Line
+	5150 3300 5750 3300
 $EndSCHEMATC

@@ -129,10 +129,10 @@ Wire Wire Line
 Wire Wire Line
 	3550 2350 3550 2400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5E956013
 P 1700 3450
-F 0 "#PWR?" H 1700 3200 50  0001 C CNN
+F 0 "#PWR0101" H 1700 3200 50  0001 C CNN
 F 1 "GND" H 1705 3277 50  0000 C CNN
 F 2 "" H 1700 3450 50  0001 C CNN
 F 3 "" H 1700 3450 50  0001 C CNN
@@ -318,8 +318,6 @@ Wire Wire Line
 	5000 3300 4050 3300
 Wire Wire Line
 	5000 2050 4900 2050
-Wire Wire Line
-	5000 3300 5150 3300
 $Comp
 L Regulator_Linear:NCP1117-3.3_SOT223 U?
 U 1 1 5E9953A6
@@ -331,18 +329,16 @@ F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 5850 2750 50  00
 	1    5750 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3900 2300 5150 2300
 Connection ~ 5750 3300
-Wire Wire Line
-	5750 3300 6200 3300
 Wire Wire Line
 	5450 3000 5150 3000
 Wire Wire Line
 	5150 3000 5150 2300
-Connection ~ 5150 2300
+Wire Wire Line
+	3900 2300 5150 2300
 Wire Wire Line
 	5150 2300 7400 2300
+Connection ~ 5150 2300
 Wire Wire Line
 	4900 2050 4900 2650
 Wire Wire Line
@@ -363,9 +359,11 @@ F 3 "~" H 6200 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 6200 3000
-Connection ~ 6200 3300
+Wire Wire Line
+	5750 3300 6200 3300
 Wire Wire Line
 	6200 3300 6500 3300
+Connection ~ 6200 3300
 $Comp
 L Device:C C?
 U 1 1 5E9AFBC4
@@ -378,7 +376,9 @@ F 3 "~" H 5150 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5150 3000
-Connection ~ 5150 3300
+Wire Wire Line
+	5000 3300 5150 3300
 Wire Wire Line
 	5150 3300 5750 3300
+Connection ~ 5150 3300
 $EndSCHEMATC

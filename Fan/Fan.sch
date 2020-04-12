@@ -81,4 +81,102 @@ F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 4550 3700 50  00
 	1    4550 3700
 	1    0    0    -1  
 $EndComp
+$Comp
+L pspice:VSOURCE V?
+U 1 1 5E934EFD
+P 3150 4950
+F 0 "V?" H 3378 4996 50  0000 L CNN
+F 1 "SQUARE_WAVE" H 3378 4905 50  0000 L CNN
+F 2 "" H 3150 4950 50  0001 C CNN
+F 3 "~" H 3150 4950 50  0001 C CNN
+	1    3150 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E935667
+P 3150 5600
+F 0 "#PWR?" H 3150 5350 50  0001 C CNN
+F 1 "GND" H 3155 5427 50  0000 C CNN
+F 2 "" H 3150 5600 50  0001 C CNN
+F 3 "" H 3150 5600 50  0001 C CNN
+	1    3150 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:ZVN3306F Q?
+U 1 1 5E935E89
+P 3850 4600
+F 0 "Q?" H 4054 4646 50  0000 L CNN
+F 1 "ZVN3306F" H 4054 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4050 4525 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 3850 4600 50  0001 L CNN
+	1    3850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E93960D
+P 5000 4600
+F 0 "R?" H 5070 4646 50  0000 L CNN
+F 1 "R" H 5070 4555 50  0000 L CNN
+F 2 "" V 4930 4600 50  0001 C CNN
+F 3 "~" H 5000 4600 50  0001 C CNN
+	1    5000 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V?
+U 1 1 5E93AC04
+P 5750 5000
+F 0 "V?" H 5978 5046 50  0000 L CNN
+F 1 "12V" H 5978 4955 50  0000 L CNN
+F 2 "" H 5750 5000 50  0001 C CNN
+F 3 "~" H 5750 5000 50  0001 C CNN
+	1    5750 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4700 5750 4450
+Wire Wire Line
+	5750 4450 5000 4450
+Wire Wire Line
+	3150 4650 3150 4600
+Wire Wire Line
+	3150 4600 3650 4600
+Wire Wire Line
+	3150 5250 3150 5350
+Wire Wire Line
+	3950 4800 3950 5350
+Wire Wire Line
+	3950 5350 3150 5350
+Connection ~ 3150 5350
+Wire Wire Line
+	3150 5350 3150 5600
+Wire Wire Line
+	5000 4750 5000 4800
+Wire Wire Line
+	5000 5600 5750 5600
+Text Notes 5800 5650 0    50   ~ 0
+Vout
+Wire Wire Line
+	3950 4400 4850 4400
+Wire Wire Line
+	4850 4400 4850 4800
+Wire Wire Line
+	4850 4800 5000 4800
+Connection ~ 5000 4800
+Wire Wire Line
+	5000 4800 5000 5600
+$Comp
+L power:GND #PWR?
+U 1 1 5E93E520
+P 5750 5300
+F 0 "#PWR?" H 5750 5050 50  0001 C CNN
+F 1 "GND" H 5755 5127 50  0000 C CNN
+F 2 "" H 5750 5300 50  0001 C CNN
+F 3 "" H 5750 5300 50  0001 C CNN
+	1    5750 5300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
