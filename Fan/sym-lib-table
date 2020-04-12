@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Solar_Car_Fan)(type Legacy)(uri ${KIPRJMOD}/Solar_Car_Fan.lib)(options "")(descr ""))
+)
