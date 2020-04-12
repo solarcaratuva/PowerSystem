@@ -1,4 +1,330 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 1250 2750 2    59   ~ 0
+AUX +\nAUX -\nDCDC +\nDCDC -\nFAN\nCHARGE\nREADY
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5E933C76
+P 1300 1650
+F 0 "J?" H 1408 1931 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 1408 1840 50  0000 C CNN
+F 2 "" H 1300 1650 50  0001 C CNN
+F 3 "~" H 1300 1650 50  0001 C CNN
+	1    1300 1650
+	1    0    0    -1  
+$EndComp
+Text Notes 1250 1800 2    59   ~ 0
+CAN HI\nCAN LO\nCAN GND
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5E89F68E
+P 1300 2450
+F 0 "J?" H 1450 3000 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 1400 2900 50  0000 C CNN
+F 2 "" H 1300 2450 50  0001 C CNN
+F 3 "~" H 1300 2450 50  0001 C CNN
+	1    1300 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x07_Male J?
+U 1 1 5E93AAC1
+P 5200 1850
+F 0 "J?" H 5150 2450 50  0000 R CNN
+F 1 "STM Inputs" H 5300 2350 50  0000 R CNN
+F 2 "" H 5200 1850 50  0001 C CNN
+F 3 "~" H 5200 1850 50  0001 C CNN
+	1    5200 1850
+	-1   0    0    -1  
+$EndComp
+Text Notes 5250 2200 0    59   ~ 0
+CAN HI\nCAN LO\nCAN GND\nAUX +\nDCDC +\nPOWER +\nPOWER -
+$Comp
+L Connector:Conn_01x07_Male J?
+U 1 1 5E941799
+P 7850 3500
+F 0 "J?" H 7800 4000 50  0000 R CNN
+F 1 "Conn_01x07_Male" H 7900 3900 50  0000 R CNN
+F 2 "" H 7850 3500 50  0001 C CNN
+F 3 "~" H 7850 3500 50  0001 C CNN
+	1    7850 3500
+	-1   0    0    -1  
+$EndComp
+Text Notes 7850 3350 0    59   ~ 0
+12 V +\n12 V -\n
+$Comp
+L Device:R R?
+U 1 1 5E949A12
+P 3550 1600
+F 0 "R?" H 3620 1646 50  0000 L CNN
+F 1 "R" H 3620 1555 50  0000 L CNN
+F 2 "" V 3480 1600 50  0001 C CNN
+F 3 "~" H 3550 1600 50  0001 C CNN
+	1    3550 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1550 3300 1450
+Wire Wire Line
+	3300 1450 3550 1450
+Wire Wire Line
+	3300 1650 3300 1750
+Wire Wire Line
+	3300 1750 3550 1750
+Wire Wire Line
+	3550 1450 4800 1450
+Wire Wire Line
+	4800 1450 4800 1550
+Wire Wire Line
+	4800 1550 5000 1550
+Connection ~ 3550 1450
+Wire Wire Line
+	3550 1750 4800 1750
+Wire Wire Line
+	4800 1750 4800 1650
+Wire Wire Line
+	4800 1650 5000 1650
+Connection ~ 3550 1750
+$Comp
+L Relay:HF3-06 K?
+U 1 1 5E94CB7B
+P 3750 2700
+F 0 "K?" H 4180 2746 50  0000 L CNN
+F 1 "HF3-06" H 4180 2655 50  0000 L CNN
+F 2 "Relay_SMD:Relay_SPDT_AXICOM_HF3Series_75ohms_Pitch1.27mm" H 4880 2670 50  0001 C CNN
+F 3 "http://hiqsdr.com/images/3/3e/Axicom-HF3.pdf" H 3750 2700 50  0001 C CNN
+	1    3750 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1550 3300 1550
+Wire Wire Line
+	1500 1650 3300 1650
+$Comp
+L pspice:DIODE D?
+U 1 1 5E95329D
+P 3700 2200
+F 0 "D?" H 3700 2465 50  0000 C CNN
+F 1 "DIODE" H 3700 2374 50  0000 C CNN
+F 2 "" H 3700 2200 50  0001 C CNN
+F 3 "~" H 3700 2200 50  0001 C CNN
+	1    3700 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2350 3400 2350
+Wire Wire Line
+	3550 2350 3550 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5E956013
+P 1700 3450
+F 0 "#PWR?" H 1700 3200 50  0001 C CNN
+F 1 "GND" H 1705 3277 50  0000 C CNN
+F 2 "" H 1700 3450 50  0001 C CNN
+F 3 "" H 1700 3450 50  0001 C CNN
+	1    1700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2250 1700 2250
+Wire Wire Line
+	1700 2250 1700 2450
+Wire Wire Line
+	1500 2450 1700 2450
+Connection ~ 1700 2450
+Wire Wire Line
+	1700 2450 1700 3000
+Wire Wire Line
+	1500 1750 1700 1750
+Wire Wire Line
+	1700 1750 1700 1800
+Connection ~ 1700 2250
+Wire Wire Line
+	3550 3000 1700 3000
+Connection ~ 1700 3000
+Wire Wire Line
+	1700 3000 1700 3200
+Wire Wire Line
+	1500 2150 3250 2150
+Wire Wire Line
+	3250 2150 3250 3100
+Wire Wire Line
+	3250 3100 3950 3100
+Wire Wire Line
+	3950 3100 3950 3000
+Wire Wire Line
+	4050 3000 4050 3200
+Wire Wire Line
+	4050 3200 1700 3200
+Connection ~ 1700 3200
+Wire Wire Line
+	3850 2400 3850 2300
+Wire Wire Line
+	3850 2300 3900 2300
+Wire Wire Line
+	7400 3200 7650 3200
+Wire Wire Line
+	7400 2300 7400 3200
+Wire Wire Line
+	3500 2200 3500 2350
+Connection ~ 3500 2350
+Wire Wire Line
+	3500 2350 3550 2350
+Wire Wire Line
+	3900 2200 3900 2300
+Connection ~ 3900 2300
+Wire Wire Line
+	3900 2300 4900 2300
+Wire Wire Line
+	3250 2150 3250 1850
+Wire Wire Line
+	3250 1850 5000 1850
+Connection ~ 3250 2150
+Wire Wire Line
+	3400 2350 3400 1950
+Wire Wire Line
+	3400 1950 5000 1950
+Connection ~ 3400 2350
+Wire Wire Line
+	3400 2350 3500 2350
+Wire Wire Line
+	1700 3200 1700 3450
+Wire Wire Line
+	7650 3300 7100 3300
+Wire Wire Line
+	4050 3300 4050 3200
+Connection ~ 4050 3200
+Wire Wire Line
+	5000 1750 5000 1800
+Wire Wire Line
+	5000 1800 1700 1800
+Connection ~ 1700 1800
+Wire Wire Line
+	1700 1800 1700 2250
+$Comp
+L Connector:Conn_01x07_Male J?
+U 1 1 5E97258B
+P 6200 1850
+F 0 "J?" H 6308 2331 50  0000 C CNN
+F 1 "STM Outputs" H 6308 2240 50  0000 C CNN
+F 2 "" H 6200 1850 50  0001 C CNN
+F 3 "~" H 6200 1850 50  0001 C CNN
+	1    6200 1850
+	1    0    0    -1  
+$EndComp
+Text Notes 6150 1800 2    59   ~ 0
+CAN HI\nCAN LO\nCAN GND
+$Comp
+L Device:LED D?
+U 1 1 5E979B1E
+P 7100 3150
+F 0 "D?" V 7139 3033 50  0000 R CNN
+F 1 "LED" V 7048 3033 50  0000 R CNN
+F 2 "" H 7100 3150 50  0001 C CNN
+F 3 "~" H 7100 3150 50  0001 C CNN
+	1    7100 3150
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7100 3300
+Wire Wire Line
+	7100 3300 6800 3300
+$Comp
+L Device:R R?
+U 1 1 5E97E448
+P 7100 2850
+F 0 "R?" H 7170 2896 50  0000 L CNN
+F 1 "R" H 7170 2805 50  0000 L CNN
+F 2 "" V 7030 2850 50  0001 C CNN
+F 3 "~" H 7100 2850 50  0001 C CNN
+	1    7100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2700 7100 1850
+Wire Wire Line
+	7100 1850 6400 1850
+$Comp
+L Device:LED D?
+U 1 1 5E980D9F
+P 6800 3150
+F 0 "D?" V 6839 3033 50  0000 R CNN
+F 1 "LED" V 6748 3033 50  0000 R CNN
+F 2 "" H 6800 3150 50  0001 C CNN
+F 3 "~" H 6800 3150 50  0001 C CNN
+	1    6800 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E980DA5
+P 6800 2850
+F 0 "R?" H 6870 2896 50  0000 L CNN
+F 1 "R" H 6870 2805 50  0000 L CNN
+F 2 "" V 6730 2850 50  0001 C CNN
+F 3 "~" H 6800 2850 50  0001 C CNN
+	1    6800 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1950 6400 1950
+$Comp
+L Device:LED D?
+U 1 1 5E984DE2
+P 6500 3150
+F 0 "D?" V 6539 3033 50  0000 R CNN
+F 1 "LED" V 6448 3033 50  0000 R CNN
+F 2 "" H 6500 3150 50  0001 C CNN
+F 3 "~" H 6500 3150 50  0001 C CNN
+	1    6500 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E984DE8
+P 6500 2850
+F 0 "R?" H 6570 2896 50  0000 L CNN
+F 1 "R" H 6570 2805 50  0000 L CNN
+F 2 "" V 6430 2850 50  0001 C CNN
+F 3 "~" H 6500 2850 50  0001 C CNN
+	1    6500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2050 6400 2050
+Connection ~ 6500 3300
+Wire Wire Line
+	6500 3300 5000 3300
+Connection ~ 6800 3300
+Wire Wire Line
+	6800 3300 6500 3300
+Wire Wire Line
+	6500 2700 6500 2050
+Wire Wire Line
+	6800 1950 6800 2700
+Wire Wire Line
+	5000 2150 5000 3300
+Connection ~ 5000 3300
+Wire Wire Line
+	5000 3300 4050 3300
+Wire Wire Line
+	5000 2050 4900 2050
+Wire Wire Line
+	4900 2050 4900 2300
+Connection ~ 4900 2300
+Wire Wire Line
+	4900 2300 7400 2300
 $EndSCHEMATC
