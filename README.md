@@ -1,3 +1,2 @@
 # PowerSystem
-
-# Dipesh was Here
+Developing PCB for Power System and ECU code for STM 32.
