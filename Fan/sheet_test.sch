@@ -1,0 +1,80 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR04
+U 1 1 5E9A249E
+P 1550 3300
+F 0 "#PWR04" H 1550 3050 50  0001 C CNN
+F 1 "GND" H 1555 3127 50  0000 C CNN
+F 2 "" H 1550 3300 50  0001 C CNN
+F 3 "" H 1550 3300 50  0001 C CNN
+	1    1550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E9A2810
+P 2750 2350
+F 0 "R4" H 2820 2396 50  0000 L CNN
+F 1 "1k" H 2820 2305 50  0000 L CNN
+F 2 "" V 2680 2350 50  0001 C CNN
+F 3 "~" H 2750 2350 50  0001 C CNN
+	1    2750 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2500 2750 2750
+Wire Wire Line
+	2750 3050 2750 3200
+Wire Wire Line
+	2750 3200 1550 3200
+Wire Wire Line
+	1550 3000 1550 3200
+Connection ~ 1550 3200
+Wire Wire Line
+	1550 3200 1550 3300
+Wire Wire Line
+	2750 2200 2750 2100
+Wire Wire Line
+	2750 2100 1550 2100
+Wire Wire Line
+	1550 2100 1550 2400
+$Comp
+L pspice:VSOURCE V3
+U 1 1 5E9A1944
+P 1550 2700
+F 0 "V3" H 1778 2791 50  0000 L CNN
+F 1 "VSOURCE" H 1778 2700 50  0000 L CNN
+F 2 "" H 1550 2700 50  0001 C CNN
+F 3 "~" H 1550 2700 50  0001 C CNN
+F 4 "V" H 1550 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 5" H 1778 2609 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 1550 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1550 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E9A394B
+P 2750 2900
+F 0 "R3" H 2820 2946 50  0000 L CNN
+F 1 "1k" H 2820 2855 50  0000 L CNN
+F 2 "" V 2680 2900 50  0001 C CNN
+F 3 "~" H 2750 2900 50  0001 C CNN
+	1    2750 2900
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -21,6 +21,9 @@ F 0 "V1" H 1178 4196 50  0000 L CNN
 F 1 "SQUARE_WAVE" H 1178 4105 50  0000 L CNN
 F 2 "" H 950 4150 50  0001 C CNN
 F 3 "~" H 950 4150 50  0001 C CNN
+F 4 "V" H 950 4150 50  0001 C CNN "Spice_Primitive"
+F 5 "pulse(0 5 0 0 0 0.05 0.1)" H 1450 4000 50  0000 C CNN "Spice_Model"
+F 6 "Y" H 950 4150 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    950  4150
 	1    0    0    -1  
 $EndComp
@@ -54,6 +57,9 @@ F 0 "V2" H 3778 4246 50  0000 L CNN
 F 1 "12V" H 3778 4155 50  0000 L CNN
 F 2 "" H 3550 4200 50  0001 C CNN
 F 3 "~" H 3550 4200 50  0001 C CNN
+F 4 "V" H 3550 4200 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 12" H 3550 4200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3550 4200 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3550 4200
 	1    0    0    -1  
 $EndComp
@@ -76,8 +82,6 @@ Wire Wire Line
 	950  4550 950  4800
 Wire Wire Line
 	2800 3950 2800 4000
-Text Notes 3550 4900 0    50   ~ 0
-Vout
 Wire Wire Line
 	2650 4000 2800 4000
 Connection ~ 2800 4000
@@ -98,28 +102,6 @@ Wire Wire Line
 	2650 3600 2650 4000
 Wire Wire Line
 	1750 3600 2650 3600
-$Comp
-L Transistor_FET:ZVN3306F Q1
-U 1 1 5E935E89
-P 1650 3800
-F 0 "Q1" H 1854 3846 50  0000 L CNN
-F 1 "ZVN3306F" H 1854 3755 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1850 3725 50  0001 L CIN
-F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 1650 3800 50  0001 L CNN
-	1    1650 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:DMP3013SFV Q2
-U 1 1 5E96184F
-P 5250 3150
-F 0 "Q2" H 5455 3196 50  0000 L CNN
-F 1 "DMP3013SFV" H 5455 3105 50  0000 L CNN
-F 2 "Package_SON:Diodes_PowerDI3333-8" H 5450 3075 50  0001 L CIN
-F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 5250 3150 50  0001 L CNN
-	1    5250 3150
-	1    0    0    -1  
-$EndComp
 $Comp
 L Solar_Car_Fan:Fan_Connections U3
 U 1 1 5E952CAF
@@ -143,17 +125,6 @@ F 3 "" H 3650 3150 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Relay:HF3-06 K1
-U 1 1 5E9341D6
-P 4750 1900
-F 0 "K1" H 5180 1946 50  0000 L CNN
-F 1 "HF3-06" H 5180 1855 50  0000 L CNN
-F 2 "Relay_SMD:Relay_SPDT_AXICOM_HF3Series_75ohms_Pitch1.27mm" H 5880 1870 50  0001 C CNN
-F 3 "http://hiqsdr.com/images/3/3e/Axicom-HF3.pdf" H 4750 1900 50  0001 C CNN
-	1    4750 1900
-	1    0    0    1   
-$EndComp
-$Comp
 L Solar_Car_Fan:Power U2
 U 1 1 5E95375B
 P 5450 1050
@@ -169,11 +140,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 1300 4550 1600
 Wire Wire Line
-	5350 1450 4950 1450
-Wire Wire Line
-	4950 1450 4950 1500
-Wire Wire Line
-	4850 2550 4850 2200
+	5350 1450 5050 1450
 Wire Wire Line
 	5650 2700 5600 2700
 Wire Wire Line
@@ -184,11 +151,6 @@ Wire Wire Line
 	5350 3450 6350 3450
 Wire Wire Line
 	6350 3450 6350 1500
-Wire Wire Line
-	6350 1500 4950 1500
-Connection ~ 4950 1500
-Wire Wire Line
-	4950 1500 4950 1600
 Wire Wire Line
 	3900 2850 4150 2850
 Wire Wire Line
@@ -232,17 +194,6 @@ Connection ~ 4550 3150
 Wire Wire Line
 	4550 3150 5050 3150
 $Comp
-L Device:LED D1
-U 1 1 5E9B33E5
-P 6050 2800
-F 0 "D1" V 6089 2683 50  0000 R CNN
-F 1 "LED" V 5998 2683 50  0000 R CNN
-F 2 "" H 6050 2800 50  0001 C CNN
-F 3 "~" H 6050 2800 50  0001 C CNN
-	1    6050 2800
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R R2
 U 1 1 5E9B4CDC
 P 6050 2500
@@ -262,9 +213,59 @@ Wire Wire Line
 	6050 2950 5600 2950
 Wire Wire Line
 	5600 2950 5600 2700
-Wire Wire Line
-	4850 2550 5650 2550
 Connection ~ 5600 2700
 Wire Wire Line
 	5600 2700 5350 2700
+$Comp
+L Relay:RM50-xx21 K1
+U 1 1 5E989FA4
+P 4750 1900
+F 0 "K1" H 5180 1946 50  0000 L CNN
+F 1 "RM50-xx21" H 5180 1855 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPST_Finder_32.21-x300" H 6020 1870 50  0001 C CNN
+F 3 "http://www.relpol.pl/en/content/download/13683/165953/file/e_RM50.pdf" H 4750 1900 50  0001 C CNN
+	1    4750 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2200 4950 2550
+Wire Wire Line
+	4950 2550 5650 2550
+Wire Wire Line
+	5050 1600 5050 1500
+Wire Wire Line
+	6350 1500 5050 1500
+Connection ~ 5050 1500
+Wire Wire Line
+	5050 1500 5050 1450
+$Comp
+L Transistor_FET:ZVN3306F Q1
+U 1 1 5E9B60ED
+P 1650 3800
+F 0 "Q1" H 1854 3846 50  0000 L CNN
+F 1 "ZVN3306F" H 1854 3755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1850 3725 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 1650 3800 50  0001 L CNN
+	1    1650 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMP3013SFV Q2
+U 1 1 5E9BA110
+P 5250 3150
+F 0 "Q2" H 5455 3196 50  0000 L CNN
+F 1 "DMP3013SFV" H 5455 3105 50  0000 L CNN
+F 2 "Package_SON:Diodes_PowerDI3333-8" H 5450 3075 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 5250 3150 50  0001 L CNN
+	1    5250 3150
+	1    0    0    -1  
+$EndComp
+Text Label 3850 4800 0    50   ~ 0
+Vout
+Text Label 5200 2550 0    50   ~ 0
+FanOut+
+Text Label 5350 2700 0    50   ~ 0
+FanOut-
+Wire Wire Line
+	6050 2650 6050 2950
 $EndSCHEMATC
