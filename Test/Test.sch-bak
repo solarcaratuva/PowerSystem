@@ -14,6 +14,43 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
+L power:GND #PWR01
+U 1 1 5E9A5E60
+P 1000 2650
+F 0 "#PWR01" H 1000 2400 50  0001 C CNN
+F 1 "GND" H 1005 2477 50  0000 C CNN
+F 2 "" H 1000 2650 50  0001 C CNN
+F 3 "" H 1000 2650 50  0001 C CNN
+	1    1000 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1600 1000 1350
+Wire Wire Line
+	1000 2600 1000 2200
+Wire Wire Line
+	1000 2650 1000 2600
+Connection ~ 1000 2600
+Wire Wire Line
+	2200 2000 2800 2000
+$Comp
+L Device:R R3
+U 1 1 5E9B1BD5
+P 3100 1300
+F 0 "R3" H 3170 1346 50  0000 L CNN
+F 1 "330" H 3170 1255 50  0000 L CNN
+F 2 "" V 3030 1300 50  0001 C CNN
+F 3 "~" H 3100 1300 50  0001 C CNN
+	1    3100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1100 3100 1150
+Text Label 3100 1600 0    50   ~ 0
+Vout
+Wire Wire Line
+	1000 1350 2200 1350
+$Comp
 L pspice:VSOURCE V1
 U 1 1 5E9A5A92
 P 1000 1900
@@ -27,118 +64,50 @@ F 6 "Y" H 1000 1900 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1000 1900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3900 2600 3100 2600
+Connection ~ 3100 2600
+Wire Wire Line
+	3100 2200 3100 2600
+Wire Wire Line
+	3100 1100 3900 1100
+Wire Wire Line
+	1000 2600 3100 2600
+Wire Wire Line
+	2200 1350 2200 2000
 $Comp
-L power:GND #PWR01
-U 1 1 5E9A5E60
-P 1000 2650
-F 0 "#PWR01" H 1000 2400 50  0001 C CNN
-F 1 "GND" H 1005 2477 50  0000 C CNN
-F 2 "" H 1000 2650 50  0001 C CNN
-F 3 "" H 1000 2650 50  0001 C CNN
-	1    1000 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 5E9A62A9
-P 2200 1700
-F 0 "R1" H 2270 1746 50  0000 L CNN
-F 1 "1k" H 2270 1655 50  0000 L CNN
-F 2 "" V 2130 1700 50  0001 C CNN
-F 3 "~" H 2200 1700 50  0001 C CNN
-	1    2200 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5E9A67DE
-P 2200 2300
-F 0 "R2" H 2270 2346 50  0000 L CNN
-F 1 "1k" H 2270 2255 50  0000 L CNN
-F 2 "" V 2130 2300 50  0001 C CNN
-F 3 "~" H 2200 2300 50  0001 C CNN
-	1    2200 2300
+L pspice:VSOURCE V2
+U 1 1 5E9E5CD9
+P 3900 1700
+F 0 "V2" H 4128 1791 50  0000 L CNN
+F 1 "VSOURCE" H 4128 1700 50  0000 L CNN
+F 2 "" H 3900 1700 50  0001 C CNN
+F 3 "~" H 3900 1700 50  0001 C CNN
+F 4 "V" H 3900 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 3" H 4128 1609 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 3900 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3900 1700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 1600 1000 1350
+	3900 2000 3900 2600
 Wire Wire Line
-	1000 1350 2200 1350
+	3100 1450 3100 1800
 Wire Wire Line
-	2200 1350 2200 1550
-Wire Wire Line
-	2200 2600 1000 2600
-Wire Wire Line
-	1000 2600 1000 2200
-Wire Wire Line
-	2200 1850 2200 2000
-Wire Wire Line
-	2200 2450 2200 2600
-Wire Wire Line
-	1000 2650 1000 2600
-Connection ~ 1000 2600
+	3900 1100 3900 1400
 $Comp
 L Transistor_FET:ZVN3306F Q1
-U 1 1 5E9A7EC6
+U 1 1 5E9EA4AB
 P 3000 2000
 F 0 "Q1" H 3204 2046 50  0000 L CNN
 F 1 "ZVN3306F" H 3204 1955 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3200 1925 50  0001 L CIN
 F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 3000 2000 50  0001 L CNN
+F 4 "X" H 3000 2000 50  0001 C CNN "Spice_Primitive"
+F 5 "ZVN3306F" H 3000 2000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3000 2000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "C:\\Users\\Nripesh\\Documents\\UVA\\Solar Car\\PowerTeam\\ZVN3306F.spice.txt" H 3000 2000 50  0001 C CNN "Spice_Lib_File"
 	1    3000 2000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 2000 2800 2000
-Connection ~ 2200 2000
-Wire Wire Line
-	2200 2000 2200 2150
-Wire Wire Line
-	3100 2200 3100 2600
-Wire Wire Line
-	3100 2600 2200 2600
-Connection ~ 2200 2600
-$Comp
-L Device:R R3
-U 1 1 5E9B1BD5
-P 3100 1550
-F 0 "R3" H 3170 1596 50  0000 L CNN
-F 1 "1k" H 3170 1505 50  0000 L CNN
-F 2 "" V 3030 1550 50  0001 C CNN
-F 3 "~" H 3100 1550 50  0001 C CNN
-	1    3100 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 1350 3100 1350
-Wire Wire Line
-	3100 1350 3100 1400
-Wire Wire Line
-	3100 1700 3100 1750
-Connection ~ 2200 1350
-Text Label 3100 1800 0    50   ~ 0
-Vout
-Wire Wire Line
-	3100 1750 3700 1750
-Wire Wire Line
-	3700 2600 3100 2600
-Connection ~ 3100 1750
-Wire Wire Line
-	3100 1750 3100 1800
-Connection ~ 3100 2600
-$Comp
-L Device:R R4
-U 1 1 5E98BBEA
-P 3700 2350
-F 0 "R4" H 3770 2396 50  0000 L CNN
-F 1 "100" H 3770 2305 50  0000 L CNN
-F 2 "" V 3630 2350 50  0001 C CNN
-F 3 "~" H 3700 2350 50  0001 C CNN
-	1    3700 2350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 2500 3700 2600
-Wire Wire Line
-	3700 1750 3700 2200
 $EndSCHEMATC
