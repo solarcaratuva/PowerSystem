@@ -67,7 +67,7 @@ F 4 "D" H 2900 1600 50  0001 C CNN "Spice_Primitive"
 F 5 "D1N4001" H 2900 1600 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2900 1600 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "2 1" H 2900 1600 50  0001 C CNN "Spice_Node_Sequence"
-F 8 "..\\1N4001.spice" H 2900 1600 50  0001 C CNN "Spice_Lib_File"
+F 8 "../1N4001.spice" H 2900 1600 50  0001 C CNN "Spice_Lib_File"
 	1    2900 1600
 	0    1    1    0   
 $EndComp
@@ -83,7 +83,7 @@ F 4 "D" H 2900 2350 50  0001 C CNN "Spice_Primitive"
 F 5 "D1N4001" H 2900 2350 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2900 2350 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "2 1" H 2900 2350 50  0001 C CNN "Spice_Node_Sequence"
-F 8 "..\\1N4001.spice" H 2900 2350 50  0001 C CNN "Spice_Lib_File"
+F 8 "../1N4001.spice" H 2900 2350 50  0001 C CNN "Spice_Lib_File"
 	1    2900 2350
 	0    1    1    0   
 $EndComp

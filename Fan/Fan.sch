@@ -70,28 +70,6 @@ F 3 "" H 3500 5950 50  0001 C CNN
 	1    3500 5950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4250 4450 4250 4550
-Wire Wire Line
-	4250 4450 4450 4450
-Wire Wire Line
-	4750 4450 5050 4450
-$Comp
-L Transistor_FET:ZVN3306F Q1
-U 1 1 5E9B60ED
-P 1650 3800
-F 0 "Q1" H 1854 3846 50  0000 L CNN
-F 1 "ZVN3306F" H 1854 3755 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1850 3725 50  0001 L CIN
-F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 1650 3800 50  0001 L CNN
-F 4 "X" H 1650 3800 50  0001 C CNN "Spice_Primitive"
-F 5 "ZVN3306F" H 1650 3800 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 1650 3800 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "..\\ZVN3306F.spice" H 1650 3800 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 1 2" H 1650 3800 50  0001 C CNN "Spice_Node_Sequence"
-	1    1650 3800
-	1    0    0    -1  
-$EndComp
 Text Notes 2000 5350 0    50   ~ 0
 .tran 100u 500m
 $Comp
@@ -109,15 +87,6 @@ F 5 "V" H 3500 5600 50  0001 L CNN "Spice_Primitive"
 $EndComp
 Wire Wire Line
 	3500 5300 3500 5400
-Text GLabel 3400 4250 1    50   Input ~ 0
-VBMS
-Text GLabel 4250 3850 1    50   Input ~ 0
-Vfan
-Wire Wire Line
-	4250 3850 4250 4450
-Connection ~ 4250 4450
-Wire Wire Line
-	3400 4750 3400 4250
 Wire Wire Line
 	2800 4750 2800 4000
 Connection ~ 2800 4000
@@ -135,17 +104,6 @@ $EndComp
 Wire Wire Line
 	2800 3250 2800 3650
 $Comp
-L power:+12V #PWR02
-U 1 1 5EBA4048
-P 2800 3250
-F 0 "#PWR02" H 2800 3100 50  0001 C CNN
-F 1 "+12V" H 2815 3423 50  0000 C CNN
-F 2 "" H 2800 3250 50  0001 C CNN
-F 3 "" H 2800 3250 50  0001 C CNN
-	1    2800 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+12V #PWR03
 U 1 1 5EBA62CC
 P 3500 5300
@@ -156,6 +114,21 @@ F 3 "" H 3500 5300 50  0001 C CNN
 	1    3500 5300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3500 5800 3500 5950
+Wire Wire Line
+	3400 4750 3400 4250
+Wire Wire Line
+	4250 4450 4250 4550
+Wire Wire Line
+	4250 4450 4450 4450
+Wire Wire Line
+	4750 4450 5050 4450
+Text GLabel 4250 3850 1    50   Input ~ 0
+Vfan
+Wire Wire Line
+	4250 3850 4250 4450
+Connection ~ 4250 4450
 $Comp
 L power:+12V #PWR04
 U 1 1 5EBA6764
@@ -165,21 +138,6 @@ F 1 "+12V" H 4565 5273 50  0000 C CNN
 F 2 "" H 4550 5100 50  0001 C CNN
 F 3 "" H 4550 5100 50  0001 C CNN
 	1    4550 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Q_PMOS_DGS Q2
-U 1 1 5EBA07C8
-P 4150 4750
-F 0 "Q2" H 4355 4796 50  0000 L CNN
-F 1 "Q_PMOS_DGS" H 4355 4705 50  0000 L CNN
-F 2 "" H 4350 4850 50  0001 C CNN
-F 3 "~" H 4150 4750 50  0001 C CNN
-F 4 "X" H 4150 4750 50  0001 C CNN "Spice_Primitive"
-F 5 "ZVP3306A" H 4150 4750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4150 4750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "..\\ZVP3306A.spice" H 4150 4750 50  0001 C CNN "Spice_Lib_File"
-	1    4150 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -202,12 +160,23 @@ $EndComp
 Wire Wire Line
 	5050 4450 5050 4600
 Wire Wire Line
-	3500 5800 3500 5950
-Wire Wire Line
 	2800 4750 3400 4750
-Connection ~ 3400 4750
 Wire Wire Line
 	3400 4750 3950 4750
+Connection ~ 3400 4750
+Text GLabel 3400 4250 1    50   Input ~ 0
+VBMS
+$Comp
+L power:+12V #PWR02
+U 1 1 5EBA4048
+P 2800 3250
+F 0 "#PWR02" H 2800 3100 50  0001 C CNN
+F 1 "+12V" H 2815 3423 50  0000 C CNN
+F 2 "" H 2800 3250 50  0001 C CNN
+F 3 "" H 2800 3250 50  0001 C CNN
+	1    2800 3250
+	1    0    0    -1  
+$EndComp
 $Comp
 L Device:R R3
 U 1 1 5EAE0EBF
@@ -218,5 +187,36 @@ F 2 "" V 4530 4450 50  0001 C CNN
 F 3 "~" H 4600 4450 50  0001 C CNN
 	1    4600 4450
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_PMOS_DGS Q2
+U 1 1 5EBA07C8
+P 4150 4750
+F 0 "Q2" H 4355 4796 50  0000 L CNN
+F 1 "Q_PMOS_DGS" H 4355 4705 50  0000 L CNN
+F 2 "" H 4350 4850 50  0001 C CNN
+F 3 "~" H 4150 4750 50  0001 C CNN
+F 4 "X" H 4150 4750 50  0001 C CNN "Spice_Primitive"
+F 5 "ZVP3306A" H 4150 4750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4150 4750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "../ZVP3306A.spice" H 4150 4750 50  0001 C CNN "Spice_Lib_File"
+	1    4150 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:ZVN3306F Q1
+U 1 1 5E9B60ED
+P 1650 3800
+F 0 "Q1" H 1854 3846 50  0000 L CNN
+F 1 "ZVN3306F" H 1854 3755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1850 3725 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 1650 3800 50  0001 L CNN
+F 4 "X" H 1650 3800 50  0001 C CNN "Spice_Primitive"
+F 5 "ZVN3306F" H 1650 3800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1650 3800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "../ZVN3306F.spice" H 1650 3800 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 1650 3800 50  0001 C CNN "Spice_Node_Sequence"
+	1    1650 3800
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
