@@ -102,7 +102,8 @@ F 3 "http://www.diodes.com/assets/Datasheets/ZVN3306F.pdf" H 1650 3800 50  0001 
 F 4 "X" H 1650 3800 50  0001 C CNN "Spice_Primitive"
 F 5 "ZVN3306F" H 1650 3800 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 1650 3800 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\Users\\daich\\Desktop\\Solar Car\\ZVN3306F.spice.txt" H 1650 3800 50  0001 C CNN "Spice_Lib_File"
+F 7 "..\\ZVN3306F.spice" H 1650 3800 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 1650 3800 50  0001 C CNN "Spice_Node_Sequence"
 	1    1650 3800
 	1    0    0    -1  
 $EndComp
@@ -169,7 +170,7 @@ F 2 "" H 5200 5350 50  0001 C CNN
 F 3 "~" H 5200 5350 50  0001 C CNN
 F 4 "Y" H 5200 5350 50  0001 L CNN "Spice_Netlist_Enabled"
 F 5 "V" H 5200 5350 50  0001 L CNN "Spice_Primitive"
-F 6 "dc(8)" H 5330 5259 50  0000 L CNN "Spice_Model"
+F 6 "dc 12" H 5330 5259 50  0000 L CNN "Spice_Model"
 	1    5200 5350
 	1    0    0    -1  
 $EndComp
@@ -195,7 +196,8 @@ F 3 "~" H 5100 4750 50  0001 C CNN
 F 4 "X" H 5100 4750 50  0001 C CNN "Spice_Primitive"
 F 5 "ZVP3306A" H 5100 4750 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5100 4750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\Users\\daich\\Desktop\\Solar Car\\ZVP3306A.spice.txt" H 5100 4750 50  0001 C CNN "Spice_Lib_File"
+F 7 "..\\ZVP3306A.spice" H 5100 4750 50  0001 C CNN "Spice_Lib_File"
+F 8 "1 2 3" H 5100 4750 50  0001 C CNN "Spice_Node_Sequence"
 	1    5100 4750
 	1    0    0    -1  
 $EndComp
@@ -220,4 +222,6 @@ Text Label 5200 4450 0    50   ~ 0
 V_Fan
 Wire Wire Line
 	5200 5650 6000 5650
+Text Notes 2000 5350 0    50   ~ 0
+.tran 100u 500m
 $EndSCHEMATC
