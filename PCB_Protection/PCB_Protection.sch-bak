@@ -1,0 +1,294 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 3250 2950 0    50   ~ 0
+.tran 10u 2
+$Sheet
+S 2850 1600 800  500 
+U 5EBB2C04
+F0 "LongWireSwitching" 50
+F1 "LongWireSwitching.sch" 50
+F2 "GND" U L 2850 2000 50 
+F3 "VCC" U L 2850 1700 50 
+F4 "Vsq" I L 2850 1850 50 
+F5 "Vout" O R 3650 1850 50 
+$EndSheet
+$Comp
+L power:GND #PWR01
+U 1 1 5EBC2953
+P 2200 2600
+F 0 "#PWR01" H 2200 2350 50  0001 C CNN
+F 1 "GND" H 2205 2427 50  0000 C CNN
+F 2 "" H 2200 2600 50  0001 C CNN
+F 3 "" H 2200 2600 50  0001 C CNN
+	1    2200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR02
+U 1 1 5EBC47D5
+P 2700 1550
+F 0 "#PWR02" H 2700 1400 50  0001 C CNN
+F 1 "+3V3" H 2715 1723 50  0000 C CNN
+F 2 "" H 2700 1550 50  0001 C CNN
+F 3 "" H 2700 1550 50  0001 C CNN
+	1    2700 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1550 2700 1700
+Wire Wire Line
+	2700 1700 2850 1700
+Wire Wire Line
+	2650 2000 2850 2000
+$Comp
+L Simulation_SPICE:VPULSE V1
+U 1 1 5EBC545C
+P 2200 2200
+F 0 "V1" H 2330 2291 50  0000 L CNN
+F 1 "VPULSE" H 2330 2200 50  0000 L CNN
+F 2 "" H 2200 2200 50  0001 C CNN
+F 3 "~" H 2200 2200 50  0001 C CNN
+F 4 "Y" H 2200 2200 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 2200 2200 50  0001 L CNN "Spice_Primitive"
+F 6 "pulse(0 1 0 1n 1n 250m 500m)" H 2330 2109 50  0000 L CNN "Spice_Model"
+	1    2200 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2600 2200 2500
+Connection ~ 2200 2500
+Wire Wire Line
+	2200 2500 2200 2400
+Wire Wire Line
+	2200 2000 2200 1850
+Wire Wire Line
+	2200 1850 2850 1850
+Wire Wire Line
+	2200 2500 2650 2500
+Wire Wire Line
+	2650 2000 2650 2500
+Text GLabel 4050 1350 1    50   Input ~ 0
+Vin
+Wire Wire Line
+	4050 1350 4050 1850
+Wire Wire Line
+	4050 1850 3650 1850
+$Comp
+L Simulation_SPICE:VDC V2
+U 1 1 5EBCB420
+P 1300 1100
+F 0 "V2" H 1430 1191 50  0000 L CNN
+F 1 "VDC" H 1430 1100 50  0000 L CNN
+F 2 "" H 1300 1100 50  0001 C CNN
+F 3 "~" H 1300 1100 50  0001 C CNN
+F 4 "Y" H 1300 1100 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1300 1100 50  0001 L CNN "Spice_Primitive"
+F 6 "dc 3.3" H 1430 1009 50  0000 L CNN "Spice_Model"
+	1    1300 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EBCE6BE
+P 1300 1300
+F 0 "#PWR04" H 1300 1050 50  0001 C CNN
+F 1 "GND" H 1305 1127 50  0000 C CNN
+F 2 "" H 1300 1300 50  0001 C CNN
+F 3 "" H 1300 1300 50  0001 C CNN
+	1    1300 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR03
+U 1 1 5EBCECFF
+P 1300 900
+F 0 "#PWR03" H 1300 750 50  0001 C CNN
+F 1 "+3V3" H 1315 1073 50  0000 C CNN
+F 2 "" H 1300 900 50  0001 C CNN
+F 3 "" H 1300 900 50  0001 C CNN
+	1    1300 900 
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5900 1600 800  500 
+U 5EBCF844
+F0 "MicroController" 50
+F1 "MicroController.sch" 50
+F2 "Vin" I L 5900 1850 50 
+F3 "VCC" U L 5900 1700 50 
+F4 "GND" U L 5900 2000 50 
+$EndSheet
+$Comp
+L power:+3V3 #PWR05
+U 1 1 5EBD3D4C
+P 5750 1550
+F 0 "#PWR05" H 5750 1400 50  0001 C CNN
+F 1 "+3V3" H 5765 1723 50  0000 C CNN
+F 2 "" H 5750 1550 50  0001 C CNN
+F 3 "" H 5750 1550 50  0001 C CNN
+	1    5750 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 1550 5750 1700
+Wire Wire Line
+	5750 1700 5900 1700
+$Comp
+L power:GND #PWR06
+U 1 1 5EBD3E03
+P 5750 2200
+F 0 "#PWR06" H 5750 1950 50  0001 C CNN
+F 1 "GND" H 5755 2027 50  0000 C CNN
+F 2 "" H 5750 2200 50  0001 C CNN
+F 3 "" H 5750 2200 50  0001 C CNN
+	1    5750 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2200 5750 2000
+Wire Wire Line
+	5750 2000 5900 2000
+Wire Wire Line
+	4050 1850 4150 1850
+Connection ~ 4050 1850
+Text GLabel 5400 1350 1    50   Input ~ 0
+Vout
+Wire Wire Line
+	5400 1350 5400 1850
+Connection ~ 5400 1850
+Wire Wire Line
+	5400 1850 5900 1850
+$Comp
+L Diode:1N5819 D3
+U 1 1 5EB95E75
+P 4500 1550
+F 0 "D3" V 4454 1629 50  0000 L CNN
+F 1 "1N5819" V 4545 1629 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4500 1375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 4500 1550 50  0001 C CNN
+F 4 "D" H 4500 1550 50  0001 C CNN "Spice_Primitive"
+F 5 "D1n5819" H 4500 1550 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 1550 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 4500 1550 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "C:\\Users\\Dipesh\\Documents\\UVA\\Solar Car\\PowerSystem\\1N5819.spice" H 4500 1550 50  0001 C CNN "Spice_Lib_File"
+	1    4500 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR07
+U 1 1 5EB980EC
+P 4500 1200
+F 0 "#PWR07" H 4500 1050 50  0001 C CNN
+F 1 "+3V3" H 4515 1373 50  0000 C CNN
+F 2 "" H 4500 1200 50  0001 C CNN
+F 3 "" H 4500 1200 50  0001 C CNN
+	1    4500 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5EB984B6
+P 4500 2450
+F 0 "#PWR08" H 4500 2200 50  0001 C CNN
+F 1 "GND" H 4505 2277 50  0000 C CNN
+F 2 "" H 4500 2450 50  0001 C CNN
+F 3 "" H 4500 2450 50  0001 C CNN
+	1    4500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5819 D4
+U 1 1 5EB9892F
+P 4500 2150
+F 0 "D4" V 4454 2229 50  0000 L CNN
+F 1 "1N5819" V 4545 2229 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4500 1975 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 4500 2150 50  0001 C CNN
+F 4 "D" H 4500 2150 50  0001 C CNN "Spice_Primitive"
+F 5 "D1n5819" H 4500 2150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 2150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 4500 2150 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "C:\\Users\\Dipesh\\Documents\\UVA\\Solar Car\\PowerSystem\\1N5819.spice" H 4500 2150 50  0001 C CNN "Spice_Lib_File"
+	1    4500 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5EB99021
+P 4300 1850
+F 0 "R4" V 4507 1850 50  0000 C CNN
+F 1 "10" V 4416 1850 50  0000 C CNN
+F 2 "" V 4230 1850 50  0001 C CNN
+F 3 "~" H 4300 1850 50  0001 C CNN
+	1    4300 1850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 1200 4500 1400
+Wire Wire Line
+	4500 1700 4500 1850
+Wire Wire Line
+	4500 2300 4500 2450
+$Comp
+L power:GND #PWR09
+U 1 1 5EB9C3A2
+P 5200 2450
+F 0 "#PWR09" H 5200 2200 50  0001 C CNN
+F 1 "GND" H 5205 2277 50  0000 C CNN
+F 2 "" H 5200 2450 50  0001 C CNN
+F 3 "" H 5200 2450 50  0001 C CNN
+	1    5200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EBD5077
+P 5000 1850
+F 0 "R3" V 5207 1850 50  0000 C CNN
+F 1 "1k" V 5116 1850 50  0000 C CNN
+F 2 "" V 4930 1850 50  0001 C CNN
+F 3 "~" H 5000 1850 50  0001 C CNN
+	1    5000 1850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 1850 4500 1850
+Connection ~ 4500 1850
+Wire Wire Line
+	4500 1850 4500 2000
+Wire Wire Line
+	4500 1850 4850 1850
+Wire Wire Line
+	5200 2450 5200 2300
+Wire Wire Line
+	5200 2000 5200 1850
+Wire Wire Line
+	5150 1850 5200 1850
+Connection ~ 5200 1850
+Wire Wire Line
+	5200 1850 5400 1850
+$Comp
+L Device:C C2
+U 1 1 5EB99B46
+P 5200 2150
+F 0 "C2" H 5315 2196 50  0000 L CNN
+F 1 "10u" H 5315 2105 50  0000 L CNN
+F 2 "" H 5238 2000 50  0001 C CNN
+F 3 "~" H 5200 2150 50  0001 C CNN
+	1    5200 2150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

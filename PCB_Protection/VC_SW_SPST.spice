@@ -1,0 +1,15 @@
+* VC_SW_SPST
+* Created by Dipesh Manandhar on 05/09/2020
+**************************************************
+* parameters:
+* 1 & 2 switch makes connection between two nodes
+* 3 & 4 controlling voltage applied (3+, 4-)
+***************************************************
+
+.SUBCKT VC_SW_SPST 1 2 3 4
+  * switch on- and off resistances
+  .PARAM ron=1m roff=1G
+  * voltage controlled switch with threshold 0.5V
+  s1 1 2 3 4 vcsw OFF
+  .MODEL vcsw SW vt=0.5 vh=0 ron='ron' roff='roff'
+.ENDS VC_SW_SPST

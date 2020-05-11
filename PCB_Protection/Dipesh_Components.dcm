@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP VC_SW_SPST
+D Voltage Controlled Switch Single-Pole, Single-Throw
+$ENDCMP
+#
+#End Doc Library
