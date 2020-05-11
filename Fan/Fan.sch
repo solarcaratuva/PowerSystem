@@ -178,17 +178,6 @@ F 3 "" H 2800 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
-U 1 1 5EAE0EBF
-P 4600 4450
-F 0 "R3" V 4393 4450 50  0000 C CNN
-F 1 "14.4" V 4484 4450 50  0000 C CNN
-F 2 "" V 4530 4450 50  0001 C CNN
-F 3 "~" H 4600 4450 50  0001 C CNN
-	1    4600 4450
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:Q_PMOS_DGS Q2
 U 1 1 5EBA07C8
 P 4150 4750
@@ -197,9 +186,9 @@ F 1 "Q_PMOS_DGS" H 4355 4705 50  0000 L CNN
 F 2 "" H 4350 4850 50  0001 C CNN
 F 3 "~" H 4150 4750 50  0001 C CNN
 F 4 "X" H 4150 4750 50  0001 C CNN "Spice_Primitive"
-F 5 "ZVP3306A" H 4150 4750 50  0001 C CNN "Spice_Model"
+F 5 "DMP2110UW" H 4150 4750 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4150 4750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "../ZVP3306A.spice" H 4150 4750 50  0001 C CNN "Spice_Lib_File"
+F 7 "../DMP2110UW.spice" H 4150 4750 50  0001 C CNN "Spice_Lib_File"
 	1    4150 4750
 	1    0    0    -1  
 $EndComp
@@ -218,5 +207,16 @@ F 7 "../ZVN3306F.spice" H 1650 3800 50  0001 C CNN "Spice_Lib_File"
 F 8 "3 1 2" H 1650 3800 50  0001 C CNN "Spice_Node_Sequence"
 	1    1650 3800
 	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EAE0EBF
+P 4600 4450
+F 0 "R3" V 4393 4450 50  0000 C CNN
+F 1 "14.4" V 4484 4450 50  0000 C CNN
+F 2 "" V 4530 4450 50  0001 C CNN
+F 3 "~" H 4600 4450 50  0001 C CNN
+	1    4600 4450
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
