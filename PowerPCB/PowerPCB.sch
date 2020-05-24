@@ -470,4 +470,15 @@ Wire Wire Line
 	7800 3650 7800 3500
 Wire Wire Line
 	7800 3500 7950 3500
+$Comp
+L MCU_ST_STM32F4:STM32F413ZHTx U2
+U 1 1 5ECD68BB
+P 10200 4100
+F 0 "U2" H 10200 411 50  0000 C CNN
+F 1 "STM32F413ZHTx" H 10200 320 50  0000 C CNN
+F 2 "Package_QFP:LQFP-144_20x20mm_P0.5mm" H 9200 700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00282249.pdf" H 10200 4100 50  0001 C CNN
+	1    10200 4100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
