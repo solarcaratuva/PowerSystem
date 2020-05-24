@@ -23,7 +23,7 @@ $Comp
 L Device:R R8
 U 1 1 5E93960D
 P 1700 4450
-F 0 "R?" H 1770 4496 50  0000 L CNN
+F 0 "R8" H 1770 4496 50  0000 L CNN
 F 1 "100k" H 1770 4405 50  0000 L CNN
 F 2 "" V 1630 4450 50  0001 C CNN
 F 3 "~" H 1700 4450 50  0001 C CNN
@@ -44,10 +44,10 @@ Wire Wire Line
 Text GLabel 1700 3900 1    50   Input ~ 0
 VCC_12
 $Comp
-L Device:Q_PMOS_DGS Q2
+L Device:Q_PMOS_DGS Q1
 U 1 1 5EBA07C8
 P 3050 4650
-F 0 "Q?" H 3255 4696 50  0000 L CNN
+F 0 "Q1" H 3255 4696 50  0000 L CNN
 F 1 "Q_PMOS_DGS" H 3255 4605 50  0000 L CNN
 F 2 "" H 3250 4750 50  0001 C CNN
 F 3 "~" H 3050 4650 50  0001 C CNN
@@ -71,39 +71,66 @@ Wire Wire Line
 Wire Wire Line
 	3450 5150 3150 5150
 Wire Wire Line
-	4650 5000 4650 4850
-Wire Wire Line
-	5050 4950 5050 4850
+	7150 4050 7000 4050
 $Comp
-L power:GND #PWR?
+L power:GND #PWR01
 U 1 1 5EC359D9
-P 5050 4950
-F 0 "#PWR?" H 5050 4700 50  0001 C CNN
-F 1 "GND" H 5055 4777 50  0000 C CNN
-F 2 "" H 5050 4950 50  0001 C CNN
-F 3 "" H 5050 4950 50  0001 C CNN
-	1    5050 4950
+P 5600 4100
+F 0 "#PWR01" H 5600 3850 50  0001 C CNN
+F 1 "GND" H 5605 3927 50  0000 C CNN
+F 2 "" H 5600 4100 50  0001 C CNN
+F 3 "" H 5600 4100 50  0001 C CNN
+	1    5600 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5150 4150 5150 4250
 $Comp
-L Relay:FINDER-32.21-x300 K?
+L Relay:FINDER-32.21-x300 K2
 U 1 1 5EC302D7
 P 4850 4550
-F 0 "K?" H 5280 4596 50  0000 L CNN
+F 0 "K2" H 5280 4596 50  0000 L CNN
 F 1 "FINDER-32.21-x300" H 5280 4505 50  0000 L CNN
 F 2 "Relay_THT:Relay_SPST_Finder_32.21-x300" H 6120 4520 50  0001 C CNN
 F 3 "http://gfinder.findernet.com/assets/Series/355/S32EN.pdf" H 4850 4550 50  0001 C CNN
 	1    4850 4550
 	1    0    0    -1  
 $EndComp
-Text HLabel 5150 4150 1    50   Output ~ 0
+Text HLabel 5600 3950 0    50   Output ~ 0
 Fan-
-Text HLabel 4650 5000 3    50   Input ~ 0
+Text HLabel 7150 4050 2    50   Input ~ 0
 FanCtrl
-Text GLabel 4650 4150 1    50   Input ~ 0
+Text GLabel 7200 3950 2    50   Input ~ 0
 VCC_12
 Wire Wire Line
 	4650 4250 4650 4150
+Text Notes 5650 4950 0    50   ~ 0
+Relay: Panasonic ALFG2PF121 (Coil Voltage 12VDC, Coil Current 117mA, Contact Current Rating 31A)
+$Comp
+L SamacSys_Parts:ALFG2PF121 K3
+U 1 1 5ECACD05
+P 5800 3950
+F 0 "K3" H 6400 4215 50  0000 C CNN
+F 1 "ALFG2PF121" H 6400 4124 50  0000 C CNN
+F 2 "ALFG2PF121" H 6850 4050 50  0001 L CNN
+F 3 "http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_lfg.pdf" H 6850 3950 50  0001 L CNN
+F 4 "General Purpose Relays LF-G relay 1.8mm High cap type: 12V" H 6850 3850 50  0001 L CNN "Description"
+F 5 "23.3" H 6850 3750 50  0001 L CNN "Height"
+F 6 "Panasonic" H 6850 3650 50  0001 L CNN "Manufacturer_Name"
+F 7 "ALFG2PF121" H 6850 3550 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "769-ALFG2PF121" H 6850 3450 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/ALFG2PF121?qs=WkdRfq4wf1O9EasQCWNl9Q%3D%3D" H 6850 3350 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 6850 3250 50  0001 L CNN "RS Part Number"
+F 11 "" H 6850 3150 50  0001 L CNN "RS Price/Stock"
+	1    5800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3950 7200 3950
+Wire Wire Line
+	5600 3950 5800 3950
+Wire Wire Line
+	5800 4050 5600 4050
+Wire Wire Line
+	5600 4050 5600 4100
 $EndSCHEMATC
