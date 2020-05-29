@@ -70,52 +70,44 @@ Wire Wire Line
 	3450 5100 3450 5150
 Wire Wire Line
 	3450 5150 3150 5150
-Wire Wire Line
-	6000 4500 5850 4500
-$Comp
-L power:GND #PWR01
-U 1 1 5EC359D9
-P 4450 4550
-F 0 "#PWR01" H 4450 4300 50  0001 C CNN
-F 1 "GND" H 4455 4377 50  0000 C CNN
-F 2 "" H 4450 4550 50  0001 C CNN
-F 3 "" H 4450 4550 50  0001 C CNN
-	1    4450 4550
-	1    0    0    -1  
-$EndComp
-Text HLabel 4450 4400 0    50   Output ~ 0
-Fan-
-Text HLabel 6000 4500 2    50   Input ~ 0
-FanCtrl
-Text GLabel 6050 4400 2    50   Input ~ 0
-VCC_12
 Text Notes 5650 4950 0    50   ~ 0
 Relay: Panasonic ALFG2PF121 (Coil Voltage 12VDC, Coil Current 117mA, Contact Current Rating 31A)
 $Comp
-L SamacSys_Parts:ALFG2PF121 K3
-U 1 1 5ECACD05
-P 4650 4400
-F 0 "K3" H 5250 4665 50  0000 C CNN
-F 1 "ALFG2PF121" H 5250 4574 50  0000 C CNN
-F 2 "SamacSys_Parts:ALFG2PF121" H 5700 4500 50  0001 L CNN
-F 3 "http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_lfg.pdf" H 5700 4400 50  0001 L CNN
-F 4 "General Purpose Relays LF-G relay 1.8mm High cap type: 12V" H 5700 4300 50  0001 L CNN "Description"
-F 5 "23.3" H 5700 4200 50  0001 L CNN "Height"
-F 6 "Panasonic" H 5700 4100 50  0001 L CNN "Manufacturer_Name"
-F 7 "ALFG2PF121" H 5700 4000 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "769-ALFG2PF121" H 5700 3900 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/ALFG2PF121?qs=WkdRfq4wf1O9EasQCWNl9Q%3D%3D" H 5700 3800 50  0001 L CNN "Mouser Price/Stock"
-F 10 "" H 5700 3700 50  0001 L CNN "RS Part Number"
-F 11 "" H 5700 3600 50  0001 L CNN "RS Price/Stock"
-	1    4650 4400
+L SamacSys_Parts:1721081-5 K4
+U 1 1 5ED203B8
+P 4600 4350
+F 0 "K4" H 5250 4615 50  0000 C CNN
+F 1 "1721081-5" H 5250 4524 50  0000 C CNN
+F 2 "SamacSys_Parts:17210815" H 5750 4450 50  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 5750 4350 50  0001 L CNN
+F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 5750 4250 50  0001 L CNN "Description"
+F 5 "15" H 5750 4150 50  0001 L CNN "Height"
+F 6 "655-1721081-5" H 5750 4050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 5750 3950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "TE Connectivity" H 5750 3850 50  0001 L CNN "Manufacturer_Name"
+F 9 "1721081-5" H 5750 3750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4600 4350
+	1    0    0    -1  
+$EndComp
+Text HLabel 5900 4350 2    50   Input ~ 0
+FanCtrl
+Text GLabel 4600 4350 0    50   Input ~ 0
+VCC_12
+Text HLabel 4600 4550 0    50   Output ~ 0
+Fan-
+$Comp
+L power:GND #PWR01
+U 1 1 5ED21FDC
+P 4250 4600
+F 0 "#PWR01" H 4250 4350 50  0001 C CNN
+F 1 "GND" H 4255 4427 50  0000 C CNN
+F 2 "" H 4250 4600 50  0001 C CNN
+F 3 "" H 4250 4600 50  0001 C CNN
+	1    4250 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5850 4400 6050 4400
+	4250 4600 4250 4450
 Wire Wire Line
-	4450 4400 4650 4400
-Wire Wire Line
-	4650 4500 4450 4500
-Wire Wire Line
-	4450 4500 4450 4550
+	4250 4450 4600 4450
 $EndSCHEMATC

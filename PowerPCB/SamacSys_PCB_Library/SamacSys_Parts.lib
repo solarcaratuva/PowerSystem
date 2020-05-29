@@ -52,4 +52,48 @@ P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
 ENDDRAW
 ENDDEF
 #
+#SamacSys ECAD Model G6L-1F-TR-DC12
+#/341175/266697/2.46/4/4/Relay or Contactor
+DEF G6L-1F-TR-DC12 K 0 30 Y Y 1 F N
+F0 "K" 1050 300 50 H V L CNN
+F1 "G6L-1F-TR-DC12" 1050 200 50 H V L CNN
+F2 "G6L1FTRDC5" 1050 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/G6L-1F-TR-DC12.pdf" 1050 0 50 H I L CNN
+F4 "Low Signal Relays - PCB 12VDC SPST-NO Low profile T and R" 1050 -100 50 H I L CNN "Description"
+F5 "4.4" 1050 -200 50 H I L CNN "Height"
+F6 "653-G6L-1F-TR-DC12" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/G6L-1F-TR-DC12?qs=ImaqFqjHA4mL8hNOtN4XNw%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Omron Electronics" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "G6L-1F-TR-DC12" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X N.O. 2 0 0 200 R 50 50 0 0 U
+X COM 4 0 -100 200 R 50 50 0 0 U
+X COIL_1 5 1200 -100 200 L 50 50 0 0 U
+X COIL_2 8 1200 0 200 L 50 50 0 0 U
+P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 1721081-5
+#/428983/266697/2.46/4/4/Relay or Contactor
+DEF 1721081-5 K 0 30 Y Y 1 F N
+F0 "K" 1150 300 50 H V L CNN
+F1 "1721081-5" 1150 200 50 H V L CNN
+F2 "17210815" 1150 100 50 H I L CNN
+F3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" 1150 0 50 H I L CNN
+F4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" 1150 -100 50 H I L CNN "Description"
+F5 "15" 1150 -200 50 H I L CNN "Height"
+F6 "655-1721081-5" 1150 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" 1150 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "TE Connectivity" 1150 -500 50 H I L CNN "Manufacturer_Name"
+F9 "1721081-5" 1150 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X COIL_1 1 1300 0 200 L 50 50 0 0 U
+X COIL_2 2 0 0 200 R 50 50 0 0 U
+X COM 3 0 -100 200 R 50 50 0 0 U
+X NO 4 0 -200 200 R 50 50 0 0 U
+P 5 0 1 6 200 100 1100 100 1100 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
 #End Library

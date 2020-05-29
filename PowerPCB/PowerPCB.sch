@@ -187,7 +187,7 @@ U 1 1 5E97258B
 P 6200 1850
 F 0 "J4" H 6308 2331 50  0000 C CNN
 F 1 "STM Outputs" H 6308 2240 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x07_P1.00mm_Vertical" H 6200 1850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 6200 1850 50  0001 C CNN
 F 3 "~" H 6200 1850 50  0001 C CNN
 	1    6200 1850
 	1    0    0    -1  
@@ -286,7 +286,7 @@ U 1 1 5E941799
 P 8150 3500
 F 0 "J5" H 8100 4000 50  0000 R CNN
 F 1 "Conn_01x07_Male" H 8200 3900 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x07_P1.00mm_Vertical" H 8150 3500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 8150 3500 50  0001 C CNN
 F 3 "~" H 8150 3500 50  0001 C CNN
 	1    8150 3500
 	-1   0    0    -1  
@@ -299,7 +299,7 @@ U 1 1 5E93AAC1
 P 5200 1850
 F 0 "J3" H 5150 2450 50  0000 R CNN
 F 1 "STM Inputs" H 5300 2350 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x07_P1.00mm_Vertical" H 5200 1850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 5200 1850 50  0001 C CNN
 F 3 "~" H 5200 1850 50  0001 C CNN
 	1    5200 1850
 	-1   0    0    -1  
@@ -310,7 +310,7 @@ U 1 1 5E89F68E
 P 1300 2450
 F 0 "J2" H 1450 3000 50  0000 C CNN
 F 1 "Conn_01x08_Male" H 1400 2900 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x08_P1.00mm_Vertical" H 1300 2450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal" H 1300 2450 50  0001 C CNN
 F 3 "~" H 1300 2450 50  0001 C CNN
 	1    1300 2450
 	1    0    0    -1  
@@ -323,7 +323,7 @@ U 1 1 5E933C76
 P 1300 1550
 F 0 "J1" H 1408 1831 50  0000 C CNN
 F 1 "Conn_01x03_Male" H 1408 1740 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 1300 1550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 1300 1550 50  0001 C CNN
 F 3 "~" H 1300 1550 50  0001 C CNN
 	1    1300 1550
 	1    0    0    -1  
@@ -479,6 +479,40 @@ F 1 "STM32F413ZHTx" H 10200 320 50  0000 C CNN
 F 2 "Package_QFP:LQFP-144_20x20mm_P0.5mm" H 9200 700 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00282249.pdf" H 10200 4100 50  0001 C CNN
 	1    10200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:1721081-5 K2
+U 1 1 5ED2417F
+P 2050 4300
+F 0 "K2" H 2700 4565 50  0000 C CNN
+F 1 "1721081-5" H 2700 4474 50  0000 C CNN
+F 2 "SamacSys_Parts:17210815" H 3200 4400 50  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 3200 4300 50  0001 L CNN
+F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 3200 4200 50  0001 L CNN "Description"
+F 5 "15" H 3200 4100 50  0001 L CNN "Height"
+F 6 "655-1721081-5" H 3200 4000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 3200 3900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "TE Connectivity" H 3200 3800 50  0001 L CNN "Manufacturer_Name"
+F 9 "1721081-5" H 3200 3700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2050 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:1721081-5 K3
+U 1 1 5ED25C0D
+P 2050 4950
+F 0 "K3" H 2700 5215 50  0000 C CNN
+F 1 "1721081-5" H 2700 5124 50  0000 C CNN
+F 2 "SamacSys_Parts:17210815" H 3200 5050 50  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 3200 4950 50  0001 L CNN
+F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 3200 4850 50  0001 L CNN "Description"
+F 5 "15" H 3200 4750 50  0001 L CNN "Height"
+F 6 "655-1721081-5" H 3200 4650 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 3200 4550 50  0001 L CNN "Mouser Price/Stock"
+F 8 "TE Connectivity" H 3200 4450 50  0001 L CNN "Manufacturer_Name"
+F 9 "1721081-5" H 3200 4350 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2050 4950
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
