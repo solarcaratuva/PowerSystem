@@ -72,23 +72,6 @@ Wire Wire Line
 	3450 5150 3150 5150
 Text Notes 5650 4950 0    50   ~ 0
 Relay: Panasonic ALFG2PF121 (Coil Voltage 12VDC, Coil Current 117mA, Contact Current Rating 31A)
-$Comp
-L SamacSys_Parts:1721081-5 K4
-U 1 1 5ED203B8
-P 4600 4350
-F 0 "K4" H 5250 4615 50  0000 C CNN
-F 1 "1721081-5" H 5250 4524 50  0000 C CNN
-F 2 "SamacSys_Parts:17210815" H 5750 4450 50  0001 L CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 5750 4350 50  0001 L CNN
-F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 5750 4250 50  0001 L CNN "Description"
-F 5 "15" H 5750 4150 50  0001 L CNN "Height"
-F 6 "655-1721081-5" H 5750 4050 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 5750 3950 50  0001 L CNN "Mouser Price/Stock"
-F 8 "TE Connectivity" H 5750 3850 50  0001 L CNN "Manufacturer_Name"
-F 9 "1721081-5" H 5750 3750 50  0001 L CNN "Manufacturer_Part_Number"
-	1    4600 4350
-	1    0    0    -1  
-$EndComp
 Text HLabel 5900 4350 2    50   Input ~ 0
 FanCtrl
 Text GLabel 4600 4350 0    50   Input ~ 0
@@ -110,4 +93,21 @@ Wire Wire Line
 	4250 4600 4250 4450
 Wire Wire Line
 	4250 4450 4600 4450
+$Comp
+L SamacSys_Parts:1721081-5 K3
+U 1 1 5ED4D566
+P 4600 4350
+F 0 "K3" H 5250 4615 50  0000 C CNN
+F 1 "1721081-5" H 5250 4524 50  0000 C CNN
+F 2 "SamacSys_Parts:17210815" H 5750 4450 50  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 5750 4350 50  0001 L CNN
+F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 5750 4250 50  0001 L CNN "Description"
+F 5 "15" H 5750 4150 50  0001 L CNN "Height"
+F 6 "655-1721081-5" H 5750 4050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 5750 3950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "TE Connectivity" H 5750 3850 50  0001 L CNN "Manufacturer_Name"
+F 9 "1721081-5" H 5750 3750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4600 4350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

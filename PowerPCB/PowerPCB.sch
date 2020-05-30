@@ -34,17 +34,6 @@ Wire Wire Line
 	4500 1650 4750 1650
 Wire Wire Line
 	1500 1650 1700 1650
-$Comp
-L Relay:HF3-06 K1
-U 1 1 5E94CB7B
-P 3750 2700
-F 0 "K1" H 4180 2746 50  0000 L CNN
-F 1 "HF3-06" H 4180 2655 50  0000 L CNN
-F 2 "Relay_SMD:Relay_SPDT_AXICOM_HF3Series_75ohms_Pitch1.27mm" H 4880 2670 50  0001 C CNN
-F 3 "http://hiqsdr.com/images/3/3e/Axicom-HF3.pdf" H 3750 2700 50  0001 C CNN
-	1    3750 2700
-	1    0    0    -1  
-$EndComp
 Connection ~ 5150 3300
 Wire Wire Line
 	5150 3300 5750 3300
@@ -82,10 +71,6 @@ Wire Wire Line
 	4900 2650 6200 2650
 Wire Wire Line
 	4900 2050 4900 2650
-Wire Wire Line
-	3900 2300 5150 2300
-Wire Wire Line
-	5150 3000 5150 2300
 Wire Wire Line
 	5450 3000 5150 3000
 Connection ~ 5750 3300
@@ -194,57 +179,16 @@ F 3 "~" H 6200 1850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5000 1700 2850 1700
-Connection ~ 4050 3200
-Wire Wire Line
-	4050 3300 4050 3200
 Wire Wire Line
 	7950 3300 7400 3300
 Wire Wire Line
-	1700 3200 1700 3450
-Wire Wire Line
-	3400 2350 3500 2350
-Connection ~ 3400 2350
-Wire Wire Line
 	3400 1950 5000 1950
 Wire Wire Line
-	3400 2350 3400 1950
-Connection ~ 3250 2150
+	3400 2350 3400 2250
 Wire Wire Line
 	3250 1800 5000 1800
-Connection ~ 3900 2300
-Wire Wire Line
-	3900 2200 3900 2300
-Wire Wire Line
-	3500 2350 3550 2350
-Connection ~ 3500 2350
-Wire Wire Line
-	3500 2200 3500 2350
-Wire Wire Line
-	7700 2300 7700 3200
 Wire Wire Line
 	7700 3200 7950 3200
-Wire Wire Line
-	3850 2300 3900 2300
-Wire Wire Line
-	3850 2400 3850 2300
-Connection ~ 1700 3200
-Wire Wire Line
-	4050 3200 1700 3200
-Wire Wire Line
-	4050 3000 4050 3200
-Wire Wire Line
-	3950 3100 3950 3000
-Wire Wire Line
-	3250 3100 3950 3100
-Wire Wire Line
-	3250 2150 3250 3100
-Wire Wire Line
-	1700 3000 1700 3200
-Connection ~ 1700 3000
-Wire Wire Line
-	3550 3000 1700 3000
-Wire Wire Line
-	1700 2450 1700 3000
 Connection ~ 1700 2450
 Wire Wire Line
 	1500 2450 1700 2450
@@ -261,21 +205,6 @@ F 1 "GND" H 1705 3277 50  0000 C CNN
 F 2 "" H 1700 3450 50  0001 C CNN
 F 3 "" H 1700 3450 50  0001 C CNN
 	1    1700 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3550 2350 3550 2400
-Wire Wire Line
-	1500 2350 3400 2350
-$Comp
-L pspice:DIODE D1
-U 1 1 5E95329D
-P 3700 2200
-F 0 "D1" H 3700 2465 50  0000 C CNN
-F 1 "DIODE" H 3700 2374 50  0000 C CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3700 2200 50  0001 C CNN
-F 3 "~" H 3700 2200 50  0001 C CNN
-	1    3700 2200
 	1    0    0    -1  
 $EndComp
 Text Notes 8200 3550 0    59   ~ 0
@@ -304,17 +233,6 @@ F 3 "~" H 5200 1850 50  0001 C CNN
 	1    5200 1850
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x08_Male J2
-U 1 1 5E89F68E
-P 1300 2450
-F 0 "J2" H 1450 3000 50  0000 C CNN
-F 1 "Conn_01x08_Male" H 1400 2900 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal" H 1300 2450 50  0001 C CNN
-F 3 "~" H 1300 2450 50  0001 C CNN
-	1    1300 2450
-	1    0    0    -1  
-$EndComp
 Text Notes 1250 1700 2    59   ~ 0
 CAN HI\nCAN LO\nCAN GND
 $Comp
@@ -328,8 +246,8 @@ F 3 "~" H 1300 1550 50  0001 C CNN
 	1    1300 1550
 	1    0    0    -1  
 $EndComp
-Text Notes 1250 2850 2    59   ~ 0
-AUX +\nAUX -\nDCDC +\nDCDC -\nFanPWM\nFanCtrl\nCHARGE\nREADY
+Text Notes 1250 2950 2    59   ~ 0
+AUX +\nAUX -\nDCDC +\nDCDC -\nVCC_12\nFanPWM\nFanCtrl\nDISCHARGE_EN\nCHARGE_EN\nCONTACTOR -
 Wire Wire Line
 	1500 2150 3250 2150
 Connection ~ 1700 2250
@@ -386,13 +304,8 @@ Wire Wire Line
 Connection ~ 2850 1700
 Wire Wire Line
 	2850 1700 1700 1700
-Wire Wire Line
-	4050 3300 5150 3300
 Text Notes 6200 2200 2    59   ~ 0
 CAN HI\nCAN LO\nCAN GND\nBMS ON\nBMS Error\nAUX ON\nDC-DC ON
-Wire Wire Line
-	5150 2300 7700 2300
-Connection ~ 5150 2300
 Wire Wire Line
 	6200 3300 6500 3300
 Connection ~ 6200 3300
@@ -432,44 +345,17 @@ Wire Wire Line
 Wire Wire Line
 	6500 2150 6400 2150
 $Sheet
-S 2300 3450 750  300 
+S 2300 2750 750  300 
 U 5EC1CC82
 F0 "Fan" 50
 F1 "Fan.sch" 50
-F2 "FanPWM" I L 2300 3550 50 
-F3 "Fan+" O R 3050 3550 50 
-F4 "Fan-" O R 3050 3650 50 
-F5 "FanCtrl" I L 2300 3650 50 
+F2 "FanPWM" I L 2300 2850 50 
+F3 "Fan+" O R 3050 2850 50 
+F4 "Fan-" O R 3050 2950 50 
+F5 "FanCtrl" I L 2300 2950 50 
 $EndSheet
-Text GLabel 7900 2300 2    50   Input ~ 0
+Text GLabel 7900 2250 2    50   Input ~ 0
 VCC_12
-Wire Wire Line
-	7900 2300 7700 2300
-Connection ~ 7700 2300
-Wire Wire Line
-	1500 2550 1950 2550
-Wire Wire Line
-	1950 2550 1950 3550
-Wire Wire Line
-	1950 3550 2300 3550
-Wire Wire Line
-	1500 2650 1850 2650
-Wire Wire Line
-	1850 2650 1850 3650
-Wire Wire Line
-	1850 3650 2300 3650
-Wire Wire Line
-	3050 3550 7700 3550
-Wire Wire Line
-	7700 3550 7700 3400
-Wire Wire Line
-	7700 3400 7950 3400
-Wire Wire Line
-	3050 3650 7800 3650
-Wire Wire Line
-	7800 3650 7800 3500
-Wire Wire Line
-	7800 3500 7950 3500
 $Comp
 L MCU_ST_STM32F4:STM32F413ZHTx U2
 U 1 1 5ECD68BB
@@ -482,37 +368,123 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:1721081-5 K2
-U 1 1 5ED2417F
-P 2050 4300
-F 0 "K2" H 2700 4565 50  0000 C CNN
-F 1 "1721081-5" H 2700 4474 50  0000 C CNN
-F 2 "SamacSys_Parts:17210815" H 3200 4400 50  0001 L CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 3200 4300 50  0001 L CNN
-F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 3200 4200 50  0001 L CNN "Description"
-F 5 "15" H 3200 4100 50  0001 L CNN "Height"
-F 6 "655-1721081-5" H 3200 4000 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 3200 3900 50  0001 L CNN "Mouser Price/Stock"
-F 8 "TE Connectivity" H 3200 3800 50  0001 L CNN "Manufacturer_Name"
-F 9 "1721081-5" H 3200 3700 50  0001 L CNN "Manufacturer_Part_Number"
-	1    2050 4300
+L Connector:Conn_01x10_Male J2
+U 1 1 5ED2CE39
+P 1300 2550
+F 0 "J2" H 1408 3131 50  0000 C CNN
+F 1 "Conn_01x10_Male" H 1408 3040 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal" H 1300 2550 50  0001 C CNN
+F 3 "~" H 1300 2550 50  0001 C CNN
+	1    1300 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2750 1850 2750
+Wire Wire Line
+	1500 2650 1950 2650
+$Comp
+L SamacSys_Parts:FERD40U45CG-TR D1
+U 1 1 5ED4A47F
+P 3400 2250
+F 0 "D1" H 3850 2515 50  0000 C CNN
+F 1 "FERD40U45CG-TR" H 3850 2424 50  0000 C CNN
+F 2 "SamacSys_Parts:FERD40U45CGTR" H 4150 2350 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/FERD40U45CG-TR.pdf" H 4150 2250 50  0001 L CNN
+F 4 "Rectifiers Field Effect Rectifier" H 4150 2150 50  0001 L CNN "Description"
+F 5 "4.6" H 4150 2050 50  0001 L CNN "Height"
+F 6 "511-FERD40U45CG-TR" H 4150 1950 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-FERD40U45CG-TR" H 4150 1850 50  0001 L CNN "Mouser Price/Stock"
+F 8 "STMicroelectronics" H 4150 1750 50  0001 L CNN "Manufacturer_Name"
+F 9 "FERD40U45CG-TR" H 4150 1650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3400 2250
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:1721081-5 K3
-U 1 1 5ED25C0D
-P 2050 4950
-F 0 "K3" H 2700 5215 50  0000 C CNN
-F 1 "1721081-5" H 2700 5124 50  0000 C CNN
-F 2 "SamacSys_Parts:17210815" H 3200 5050 50  0001 L CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 3200 4950 50  0001 L CNN
-F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 3200 4850 50  0001 L CNN "Description"
-F 5 "15" H 3200 4750 50  0001 L CNN "Height"
-F 6 "655-1721081-5" H 3200 4650 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 3200 4550 50  0001 L CNN "Mouser Price/Stock"
-F 8 "TE Connectivity" H 3200 4450 50  0001 L CNN "Manufacturer_Name"
-F 9 "1721081-5" H 3200 4350 50  0001 L CNN "Manufacturer_Part_Number"
-	1    2050 4950
+L SamacSys_Parts:1721081-5 K1
+U 1 1 5ED4C610
+P 2050 4100
+F 0 "K1" H 2700 4365 50  0000 C CNN
+F 1 "1721081-5" H 2700 4274 50  0000 C CNN
+F 2 "SamacSys_Parts:17210815" H 3200 4200 50  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 3200 4100 50  0001 L CNN
+F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 3200 4000 50  0001 L CNN "Description"
+F 5 "15" H 3200 3900 50  0001 L CNN "Height"
+F 6 "655-1721081-5" H 3200 3800 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 3200 3700 50  0001 L CNN "Mouser Price/Stock"
+F 8 "TE Connectivity" H 3200 3600 50  0001 L CNN "Manufacturer_Name"
+F 9 "1721081-5" H 3200 3500 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2050 4100
 	1    0    0    -1  
 $EndComp
+$Comp
+L SamacSys_Parts:1721081-5 K2
+U 1 1 5ED4CC46
+P 2050 4800
+F 0 "K2" H 2700 5065 50  0000 C CNN
+F 1 "1721081-5" H 2700 4974 50  0000 C CNN
+F 2 "SamacSys_Parts:17210815" H 3200 4900 50  0001 L CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5" H 3200 4800 50  0001 L CNN
+F 4 "SPDT-NO PCB Mount Latching Relay Through Hole, 3 A, 12V dc" H 3200 4700 50  0001 L CNN "Description"
+F 5 "15" H 3200 4600 50  0001 L CNN "Height"
+F 6 "655-1721081-5" H 3200 4500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-OEG/1721081-5?qs=BqFpTYCQ3dI5UJqEVQS1jg%3D%3D" H 3200 4400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "TE Connectivity" H 3200 4300 50  0001 L CNN "Manufacturer_Name"
+F 9 "1721081-5" H 3200 4200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2050 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2350 3400 2350
+Connection ~ 3400 2350
+Wire Wire Line
+	1500 2550 2050 2550
+Connection ~ 1700 3300
+Wire Wire Line
+	1700 3300 1700 3450
+Wire Wire Line
+	1700 2450 1700 3300
+Wire Wire Line
+	1700 3300 5150 3300
+Wire Wire Line
+	2050 2550 2050 2600
+Wire Wire Line
+	2050 2600 4300 2600
+Wire Wire Line
+	1950 2650 1950 2850
+Wire Wire Line
+	1950 2850 2300 2850
+Wire Wire Line
+	1850 2750 1850 2950
+Wire Wire Line
+	1850 2950 2300 2950
+Wire Wire Line
+	4950 3400 4950 2850
+Wire Wire Line
+	4950 2850 3050 2850
+Wire Wire Line
+	4950 3400 7950 3400
+Wire Wire Line
+	4850 3500 4850 2950
+Wire Wire Line
+	4850 2950 3050 2950
+Wire Wire Line
+	4850 3500 7950 3500
+Wire Wire Line
+	3400 1950 3400 2250
+Connection ~ 3400 2250
+Wire Wire Line
+	4300 2250 5150 2250
+Wire Wire Line
+	4300 2250 4300 2600
+Connection ~ 4300 2250
+Wire Wire Line
+	5150 2250 5150 3000
+Connection ~ 5150 2250
+Wire Wire Line
+	5150 2250 7700 2250
+Wire Wire Line
+	7700 2250 7700 3200
+Connection ~ 7700 2250
+Wire Wire Line
+	7700 2250 7900 2250
 $EndSCHEMATC

@@ -3,11 +3,10 @@ Developing PCB for Power System and ECU code for STM32F413ZH.
 
 ## PCB Design
 TODO:
-1) Remove double throw 12V power relay off PCB (as it is chasis mount)
-2) Add charge and discharge relays to PCB
-3) Figure out which pins on the STM to use for what
-4) Add extra CAN port (need one for Rx from BMS, and one for Tx and Rx to other PCBs) as well as the external CAN Tranceivers
-5) Make sure everything has footprint and 3d model
+1) Add charge and discharge relays to PCB
+2) Figure out which pins on the STM to use for what
+3) Add extra CAN port (need one for Rx from BMS, and one for Tx and Rx to other PCBs) as well as the external CAN Tranceivers
+4) Make sure everything has footprint and 3d model
 
 ## STM 32 & ECU Code
 TODO:

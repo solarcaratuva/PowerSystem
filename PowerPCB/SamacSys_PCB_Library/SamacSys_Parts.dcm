@@ -24,4 +24,10 @@ K
 F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1721081%7FD1%7Fpdf%7FEnglish%7FENG_CD_1721081_D1.pdf%7F1721081-5
 $ENDCMP
 #
+$CMP FERD40U45CG-TR
+D Rectifiers Field Effect Rectifier
+K
+F https://componentsearchengine.com/Datasheets/1/FERD40U45CG-TR.pdf
+$ENDCMP
+#
 #End Doc Library
