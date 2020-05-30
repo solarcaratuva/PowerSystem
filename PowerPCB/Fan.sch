@@ -72,9 +72,9 @@ Wire Wire Line
 	3450 5150 3150 5150
 Text Notes 5650 4950 0    50   ~ 0
 Relay: Panasonic ALFG2PF121 (Coil Voltage 12VDC, Coil Current 117mA, Contact Current Rating 31A)
-Text HLabel 5900 4350 2    50   Input ~ 0
+Text HLabel 4600 4350 0    50   Input ~ 0
 FanCtrl
-Text GLabel 4600 4350 0    50   Input ~ 0
+Text GLabel 5900 4350 2    50   Input ~ 0
 VCC_12
 Text HLabel 4600 4550 0    50   Output ~ 0
 Fan-
