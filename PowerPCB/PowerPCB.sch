@@ -34,53 +34,44 @@ Wire Wire Line
 	4500 1650 4750 1650
 Wire Wire Line
 	1500 1650 1700 1650
-Wire Wire Line
-	5150 3300 5750 3300
 $Comp
 L Device:C C1
 U 1 1 5E9AFBC4
-P 5150 3150
-F 0 "C1" H 5265 3196 50  0000 L CNN
-F 1 "C" H 5265 3105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5188 3000 50  0001 C CNN
-F 3 "~" H 5150 3150 50  0001 C CNN
-	1    5150 3150
+P 2150 5500
+F 0 "C1" H 2265 5546 50  0000 L CNN
+F 1 "C" H 2265 5455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2188 5350 50  0001 C CNN
+F 3 "~" H 2150 5500 50  0001 C CNN
+	1    2150 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5750 3300 6200 3300
-Connection ~ 6200 3000
+	2650 5650 3100 5650
 $Comp
 L Device:C C2
 U 1 1 5E9AEA5E
-P 6200 3150
-F 0 "C2" H 6315 3196 50  0000 L CNN
-F 1 "C" H 6315 3105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6238 3000 50  0001 C CNN
-F 3 "~" H 6200 3150 50  0001 C CNN
-	1    6200 3150
+P 3100 5500
+F 0 "C2" H 3215 5546 50  0000 L CNN
+F 1 "C" H 3215 5455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3138 5350 50  0001 C CNN
+F 3 "~" H 3100 5500 50  0001 C CNN
+	1    3100 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 3000 6200 3000
+	2950 5350 3100 5350
 Wire Wire Line
-	6200 2650 6200 3000
-Wire Wire Line
-	4900 2650 6200 2650
-Wire Wire Line
-	4900 2050 4900 2650
-Wire Wire Line
-	5450 3000 5150 3000
-Connection ~ 5750 3300
+	2350 5350 2150 5350
+Connection ~ 2650 5650
 $Comp
 L Regulator_Linear:NCP1117-3.3_SOT223 U1
 U 1 1 5E9953A6
-P 5750 3000
-F 0 "U1" H 5750 3242 50  0000 C CNN
-F 1 "NCP1117-3.3_SOT223" H 5750 3151 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5750 3200 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 5850 2750 50  0001 C CNN
-	1    5750 3000
+P 2650 5350
+F 0 "U1" H 2650 5592 50  0000 C CNN
+F 1 "NCP1117-3.3_SOT223" H 2650 5501 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2650 5550 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 2750 5100 50  0001 C CNN
+	1    2650 5350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -183,12 +174,12 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x07_Male J5
 U 1 1 5E941799
-P 8150 3700
-F 0 "J5" H 8100 4200 50  0000 R CNN
-F 1 "Conn_01x07_Male" H 8200 4100 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 8150 3700 50  0001 C CNN
-F 3 "~" H 8150 3700 50  0001 C CNN
-	1    8150 3700
+P 5150 3400
+F 0 "J5" H 5100 3900 50  0000 R CNN
+F 1 "Conn_01x07_Male" H 5200 3800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 5150 3400 50  0001 C CNN
+F 3 "~" H 5150 3400 50  0001 C CNN
+	1    5150 3400
 	-1   0    0    -1  
 $EndComp
 Text Notes 5250 2100 0    59   ~ 0
@@ -270,9 +261,6 @@ Connection ~ 3250 1800
 Text Notes 6200 2200 2    59   ~ 0
 CAN HI\nCAN LO\nCAN GND\nBMS ON\nBMS Error\nAUX ON\nDC-DC ON
 Wire Wire Line
-	6200 3300 6500 3300
-Connection ~ 6200 3300
-Wire Wire Line
 	6400 2050 6800 2050
 Wire Wire Line
 	6400 1950 7100 1950
@@ -300,7 +288,6 @@ F 3 "~" H 6500 3150 50  0001 C CNN
 	1    6500 3150
 	0    -1   -1   0   
 $EndComp
-Connection ~ 6500 3300
 Wire Wire Line
 	6500 3300 6800 3300
 Wire Wire Line
@@ -308,14 +295,14 @@ Wire Wire Line
 Wire Wire Line
 	6500 2150 6400 2150
 $Sheet
-S 4000 2750 750  300 
+S 4000 2450 750  300 
 U 5EC1CC82
 F0 "Fan" 50
 F1 "Fan.sch" 50
-F2 "FanPWM" I L 4000 2850 50 
-F3 "Fan+" O R 4750 2850 50 
-F4 "Fan-" O R 4750 2950 50 
-F5 "FanCtrl" I L 4000 2950 50 
+F2 "FanPWM" I L 4000 2550 50 
+F3 "Fan+" O R 4750 2550 50 
+F4 "Fan-" O R 4750 2650 50 
+F5 "FanCtrl" I L 4000 2650 50 
 $EndSheet
 $Comp
 L MCU_ST_STM32F4:STM32F413ZHTx U2
@@ -374,29 +361,13 @@ F 9 "1721081-5" H 3300 3450 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 3400 4950 2850
+	4950 3100 4950 2550
 Wire Wire Line
-	4950 2850 4750 2850
+	4950 2550 4750 2550
 Wire Wire Line
-	4950 3400 7950 3400
+	4850 3200 4850 2650
 Wire Wire Line
-	4850 3500 4850 2950
-Wire Wire Line
-	4850 2950 4750 2950
-Wire Wire Line
-	4850 3500 7950 3500
-Wire Wire Line
-	1500 2550 2250 2550
-Wire Wire Line
-	2250 2850 4000 2850
-Wire Wire Line
-	1500 2650 2150 2650
-Wire Wire Line
-	2150 2950 4000 2950
-Wire Wire Line
-	1700 4550 1850 4550
-Wire Wire Line
-	1700 4550 1700 4700
+	4850 2650 4750 2650
 $Comp
 L power:GND #PWR0101
 U 1 1 5E956013
@@ -408,28 +379,13 @@ F 3 "" H 1700 4700 50  0001 C CNN
 	1    1700 4700
 	1    0    0    -1  
 $EndComp
-Connection ~ 1700 4550
 Wire Wire Line
 	1500 2750 2050 2750
-Wire Wire Line
-	5150 3300 5150 3650
-Connection ~ 5150 3300
-Wire Wire Line
-	1700 2450 1700 4550
 Connection ~ 1700 2450
 Wire Wire Line
 	1500 2850 1950 2850
-Text GLabel 3600 3300 2    50   Input ~ 0
+Text GLabel 3450 3300 2    50   Input ~ 0
 VCC_12
-Wire Wire Line
-	3600 3300 3550 3300
-Wire Wire Line
-	3450 4050 3550 4050
-Wire Wire Line
-	3550 4050 3550 3300
-Connection ~ 3550 3300
-Wire Wire Line
-	3550 3300 3450 3300
 Wire Wire Line
 	2050 3300 2150 3300
 Wire Wire Line
@@ -445,10 +401,6 @@ Wire Wire Line
 Wire Wire Line
 	1850 4150 2150 4150
 Wire Wire Line
-	2150 4250 1850 4250
-Wire Wire Line
-	1850 4250 1850 4550
-Wire Wire Line
 	1700 1700 1700 2450
 Wire Wire Line
 	3400 1950 3400 2250
@@ -460,21 +412,7 @@ Wire Wire Line
 	1950 2850 1950 4050
 Wire Wire Line
 	2050 2750 2050 3300
-Wire Wire Line
-	2150 2650 2150 2950
-Wire Wire Line
-	2250 2550 2250 2850
-Wire Wire Line
-	3550 3300 3550 2350
-Wire Wire Line
-	1500 2350 3550 2350
-Wire Wire Line
-	3550 2350 5150 2350
-Wire Wire Line
-	5150 2350 5150 3000
-Connection ~ 3550 2350
-Connection ~ 5150 3000
-Text Notes 8200 3550 0    59   ~ 0
+Text Notes 5200 3250 0    59   ~ 0
 Fan +\nFan -
 $Comp
 L power:GND #PWR?
@@ -496,12 +434,57 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5ED64848
-P 5150 3650
-F 0 "#PWR?" H 5150 3400 50  0001 C CNN
-F 1 "GND" H 5155 3477 50  0000 C CNN
-F 2 "" H 5150 3650 50  0001 C CNN
-F 3 "" H 5150 3650 50  0001 C CNN
-	1    5150 3650
+P 2650 5650
+F 0 "#PWR?" H 2650 5400 50  0001 C CNN
+F 1 "GND" H 2655 5477 50  0000 C CNN
+F 2 "" H 2650 5650 50  0001 C CNN
+F 3 "" H 2650 5650 50  0001 C CNN
+	1    2650 5650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1700 2450 1700 4250
+Wire Wire Line
+	1700 4250 2150 4250
+Connection ~ 1700 4250
+Wire Wire Line
+	1700 4250 1700 4700
+Text GLabel 3450 4050 2    50   Input ~ 0
+VCC_12
+Wire Wire Line
+	2150 5650 2650 5650
+$Comp
+L power:GND #PWR?
+U 1 1 5ED77241
+P 6500 3300
+F 0 "#PWR?" H 6500 3050 50  0001 C CNN
+F 1 "GND" H 6505 3127 50  0000 C CNN
+F 2 "" H 6500 3300 50  0001 C CNN
+F 3 "" H 6500 3300 50  0001 C CNN
+	1    6500 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 3300
+Text GLabel 1900 5350 0    50   Input ~ 0
+VCC_12
+Connection ~ 2150 5350
+Text GLabel 3350 5350 2    50   Input ~ 0
+VCC_3.3
+Wire Wire Line
+	3350 5350 3100 5350
+Connection ~ 3100 5350
+Wire Wire Line
+	1900 5350 2150 5350
+Text GLabel 4900 2050 0    50   Input ~ 0
+VCC_3.3
+Text GLabel 1800 2350 2    50   Input ~ 0
+VCC_12
+Wire Wire Line
+	1500 2350 1800 2350
+Wire Wire Line
+	4950 3200 4850 3200
+Wire Wire Line
+	1500 2550 4000 2550
+Wire Wire Line
+	1500 2650 4000 2650
 $EndSCHEMATC

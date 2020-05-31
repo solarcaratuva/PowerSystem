@@ -18,7 +18,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 4650 1700 4650
 Text Notes 5650 5250 0    50   ~ 0
-*TODO: Choose a relay\n\n*.tran 100u 500m
+*Relay: TE 1721081-5 (Coil Voltage 12VDC, Contact Current Rating 3 A)\n*.tran 100u 500m
 $Comp
 L Device:R R8
 U 1 1 5E93960D
@@ -70,8 +70,6 @@ Wire Wire Line
 	3450 5100 3450 5150
 Wire Wire Line
 	3450 5150 3150 5150
-Text Notes 5650 4950 0    50   ~ 0
-Relay: Panasonic ALFG2PF121 (Coil Voltage 12VDC, Coil Current 117mA, Contact Current Rating 31A)
 Text HLabel 4600 4350 0    50   Input ~ 0
 FanCtrl
 Text GLabel 5900 4350 2    50   Input ~ 0
