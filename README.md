@@ -5,9 +5,11 @@ Developing PCB for Power System and ECU code for STM32F413ZH.
 TODO:
 1) ~Remove double throw 12V power relay off PCB (as it is chasis mount)~
 2) ~Add charge and discharge relays to PCB~
-3) Figure out which pins on the STM to use for what
-4) Add extra CAN port (need one for Rx from BMS, and one for Tx and Rx to other PCBs) as well as the external CAN Tranceivers
-5) Make sure everything has footprint and 3d model
+3) ~Figure out which pins on the STM to use for what~
+4) ~Add extra CAN port (need one for Rx from BMS, and one for Tx and Rx to other PCBs) as well as the external CAN Tranceivers~
+5) ~Make sure everything has footprint and 3d model~
+6) Pick out exact voltage regulator models
+7) Layout board
 
 ## STM 32 & ECU Code
 TODO:
@@ -25,11 +27,11 @@ Important pins for us:
 | PB7 | `PB_7`/`LED2` | CAN Error |
 | PB14 | `PB_14`/`LED3` | Unused LED |
 | PC13 | `PC_13`/`BUTTON1` | Unused Button |
-| PD0 | `PD_0` | CAN1 Receivier |
-| PD1 | `PD_1` | CAN1 Transmitter |
-| PB12 | `PB_12` | CAN2 Receivier |
-| PB13 | `PB_13` | CAN2 Transmitter |
-| PG9 | `PG_9`/`D0` | Unused Digital I/O |
+| PD0 | `PD_0` | CAN1 (BMS) Receivier |
+| PD1 | `PD_1` | CAN1 (BMS) Transmitter |
+| PB12 | `PB_12` | CAN2 (Main) Receivier |
+| PB13 | `PB_13` | CAN2 (Main) Transmitter |
+| PG9 | `PG_9`/`D0` | DC-DC ON |
 | PG14 | `PG_14`/`D1` | Unused Digital I/O |
 | PF15 | `PF_15`/`D2` | Unused Digital I/O |
 | PE13 | `PE_13`/`D3` | Unused Digital I/O |
@@ -45,8 +47,8 @@ Important pins for us:
 | PA5 | `PA_5`/`D13` | Unused Digital I/O |
 | PB9 | `PB_9`/`D14` | Unused Digital I/O |
 | PB8 | `PB_8`/`D15` | Unused Digital I/O |
-| PA3 | `PA_3`/`A0` | Unused Analog I/O |
-| PC0 | `PC_0`/`A1` | Unused Analog I/O |
+| PA3 | `PA_3`/`A0` | AUX Voltage |
+| PC0 | `PC_0`/`A1` | DC-DC Voltage |
 | PC3 | `PC_3`/`A2` | Unused Analog I/O |
 | PC1 | `PC_1`/`A3` | Unused Analog I/O |
 | PC4 | `PC_4`/`A4` | Unused Analog I/O |
