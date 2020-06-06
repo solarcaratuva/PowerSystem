@@ -1,7 +1,7 @@
 #include <mbed.h>
 
 
-#if defined (DEVICE_CAN) || defined(DOXYGEN_ONLY)
+#if defined(DEVICE_CAN) || defined(DOXYGEN_ONLY)
 
 Ticker ticker;
 DigitalOut led1(LED1);
