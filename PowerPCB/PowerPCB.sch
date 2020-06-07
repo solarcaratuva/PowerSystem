@@ -85,17 +85,6 @@ F4 "Fan-" O R 4750 2650 50
 F5 "FanCtrl" I L 4000 2650 50 
 $EndSheet
 $Comp
-L MCU_ST_STM32F4:STM32F413ZHTx U2
-U 1 1 5ECD68BB
-P 10600 5550
-F 0 "U2" H 10600 1861 50  0000 C CNN
-F 1 "STM32F413ZHTx" H 10600 1770 50  0000 C CNN
-F 2 "Package_QFP:LQFP-144_20x20mm_P0.5mm" H 9600 2150 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00282249.pdf" H 10600 5550 50  0001 C CNN
-	1    10600 5550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x10_Male J2
 U 1 1 5ED2CE39
 P 1300 2450
@@ -368,17 +357,6 @@ F 3 "" H 4550 5750 50  0001 C CNN
 	1    4550 5750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Interface_CAN_LIN:MCP2562-E-P U4
-U 1 1 5ED92703
-P 5050 5550
-F 0 "U4" H 5050 6131 50  0000 C CNN
-F 1 "MCP2562-E-P" H 5050 6040 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 5050 5050 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 5050 5550 50  0001 C CNN
-	1    5050 5550
-	1    0    0    -1  
-$EndComp
 Text GLabel 1800 1450 2    50   Input ~ 0
 BMS_CAN_HI
 Text GLabel 1800 1550 2    50   Input ~ 0
@@ -515,8 +493,6 @@ Text GLabel 14000 2200 1    50   Input ~ 0
 AUX+
 Text GLabel 14050 6950 1    50   Input ~ 0
 DCDC+
-Wire Wire Line
-	14000 2550 11800 2550
 Connection ~ 14000 2550
 Wire Wire Line
 	14000 2550 14000 2500
@@ -555,18 +531,12 @@ F 3 "" H 14050 7650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	14050 7250 14050 7300
-Wire Wire Line
-	11800 5350 14750 5350
 Text GLabel 15100 5600 1    50   Input ~ 0
 VCC_3.3
 Wire Wire Line
 	14750 5600 14750 5350
 Wire Wire Line
-	14400 4650 11800 4650
-Wire Wire Line
 	14400 5600 14400 4650
-Wire Wire Line
-	14050 3950 11800 3950
 Wire Wire Line
 	14050 5600 14050 3950
 Wire Wire Line
@@ -713,8 +683,6 @@ Wire Wire Line
 	14050 7300 13800 7300
 Wire Wire Line
 	13800 7300 13800 5650
-Wire Wire Line
-	13800 5650 11800 5650
 Connection ~ 14050 7300
 Wire Wire Line
 	14050 7300 14050 7350
@@ -1070,4 +1038,36 @@ Wire Wire Line
 	9650 1550 9650 1600
 Wire Wire Line
 	9650 1550 10000 1550
+Wire Wire Line
+	14400 4650 11800 4650
+Wire Wire Line
+	13800 5650 11800 5650
+Wire Wire Line
+	11800 5350 14750 5350
+Wire Wire Line
+	14050 3950 11800 3950
+Wire Wire Line
+	14000 2550 11800 2550
+$Comp
+L MCU_ST_STM32F4:STM32F413ZHTx U2
+U 1 1 5ECD68BB
+P 10600 5550
+F 0 "U2" H 10600 1861 50  0000 C CNN
+F 1 "STM32F413ZHTx" H 10600 1770 50  0000 C CNN
+F 2 "Package_QFP:LQFP-144_20x20mm_P0.5mm" H 9600 2150 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00282249.pdf" H 10600 5550 50  0001 C CNN
+	1    10600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_CAN_LIN:MCP2562-E-P U4
+U 1 1 5ED92703
+P 5050 5550
+F 0 "U4" H 5050 6131 50  0000 C CNN
+F 1 "MCP2562-E-P" H 5050 6040 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5050 5050 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 5050 5550 50  0001 C CNN
+	1    5050 5550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
