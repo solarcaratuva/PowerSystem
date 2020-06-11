@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 2
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -516,7 +516,7 @@ AUX+
 Text GLabel 14050 6950 1    50   Input ~ 0
 DCDC+
 Wire Wire Line
-	14000 2550 11800 2550
+	14000 2550 12500 2550
 Connection ~ 14000 2550
 Wire Wire Line
 	14000 2550 14000 2500
@@ -713,8 +713,6 @@ Wire Wire Line
 	14050 7300 13800 7300
 Wire Wire Line
 	13800 7300 13800 5650
-Wire Wire Line
-	13800 5650 11800 5650
 Connection ~ 14050 7300
 Wire Wire Line
 	14050 7300 14050 7350
@@ -768,7 +766,7 @@ $EndComp
 Wire Wire Line
 	7650 4800 7650 4850
 Wire Wire Line
-	9400 4850 7650 4850
+	9400 4850 8900 4850
 Connection ~ 7650 4850
 Wire Wire Line
 	7650 4850 7650 4900
@@ -1070,4 +1068,36 @@ Wire Wire Line
 	9650 1550 9650 1600
 Wire Wire Line
 	9650 1550 10000 1550
+Wire Wire Line
+	8300 4850 7650 4850
+$Sheet
+S 8300 4750 600  200 
+U 5EE2B52D
+F0 "InputProtection" 50
+F1 "InputProtection.sch" 50
+F2 "Vin" I L 8300 4850 50 
+F3 "ToSTM" O R 8900 4850 50 
+$EndSheet
+$Sheet
+S 11950 2450 550  200 
+U 5EE3728E
+F0 "InputProtection2" 50
+F1 "InputProtection.sch" 50
+F2 "Vin" I R 12500 2550 50 
+F3 "ToSTM" O L 11950 2550 50 
+$EndSheet
+Wire Wire Line
+	11950 2550 11800 2550
+$Sheet
+S 11950 5550 500  200 
+U 5EE40591
+F0 "InputProtection3" 50
+F1 "InputProtection.sch" 50
+F2 "Vin" I R 12450 5650 50 
+F3 "ToSTM" O L 11950 5650 50 
+$EndSheet
+Wire Wire Line
+	11800 5650 11950 5650
+Wire Wire Line
+	12450 5650 13800 5650
 $EndSCHEMATC
