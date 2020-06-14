@@ -30,4 +30,16 @@ K
 F https://componentsearchengine.com/Datasheets/1/FERD40U45CG-TR.pdf
 $ENDCMP
 #
+$CMP 1N5819HW-7-F
+D Diode Schottky 1A 40V SOD123 Diodes Inc 1N5819HW-7-F, SMT Schottky Diode, 40V 1A, 2-Pin SOD-123
+K
+F http://www.diodes.com/_files/datasheets/ds30217.pdf
+$ENDCMP
+#
+$CMP SD0805S040S0R1
+D Schottky Diodes & Rectifiers 40volts 0.1A SIZE 0805
+K
+F https://componentsearchengine.com/Datasheets/1/SD0805S040S0R1.pdf
+$ENDCMP
+#
 #End Doc Library
