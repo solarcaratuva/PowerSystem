@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 1.27)
     (trace_clearance 0.2)
     (zone_clearance 0.508)
     (zone_45_only no)
@@ -239,7 +239,7 @@
 
   (net_class Default "This is the default net class."
     (clearance 0.2)
-    (trace_width 0.25)
+    (trace_width 1.27)
     (via_dia 0.8)
     (via_drill 0.4)
     (uvia_dia 0.3)
@@ -2588,7 +2588,6 @@
   (segment (start 376.2 176) (end 374.4 174.2) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 374.4 184.2) (end 376.2 182.4) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 376.2 182.4) (end 376.2 176) (width 0.25) (layer F.Cu) (net 2))
-  (segment (start 345.2 187.78) (end 340.8 192.18) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 362.9 239.3) (end 364.675 239.3) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 361.2 241) (end 362.9 239.3) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 361.2 247.95) (end 361.2 241) (width 0.25) (layer F.Cu) (net 2))
@@ -2604,11 +2603,12 @@
   (segment (start 360.15 238.05) (end 364 238.05) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 356.13 238.4) (end 359.8 238.4) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 359.8 238.4) (end 360.15 238.05) (width 0.25) (layer F.Cu) (net 2))
-  (segment (start 341.4 192.78) (end 341.4 230.8) (width 0.25) (layer F.Cu) (net 2))
-  (segment (start 340.8 192.18) (end 341.4 192.78) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 374.4 184.2) (end 348.78 184.2) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 346.049999 186.930001) (end 345.2 187.78) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 348.78 184.2) (end 346.049999 186.930001) (width 0.25) (layer F.Cu) (net 2))
+  (segment (start 340.8 230.2) (end 341.4 230.8) (width 0.25) (layer F.Cu) (net 2))
+  (segment (start 345.2 187.78) (end 340.8 192.18) (width 0.25) (layer F.Cu) (net 2))
+  (segment (start 340.8 192.18) (end 340.8 230.2) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 362 230) (end 362 232) (width 0.25) (layer F.Cu) (net 3))
   (segment (start 362 197) (end 362 199) (width 0.25) (layer F.Cu) (net 4))
   (segment (start 382.05 222) (end 383.975 222) (width 0.25) (layer F.Cu) (net 5))
