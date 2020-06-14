@@ -60,7 +60,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFFFFF)
+    (visible_elements 7FFFF7FF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -1153,7 +1153,7 @@
   )
 
   (module Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal (layer F.Cu) (tedit 59FED5CB) (tstamp 5EDC037E)
-    (at 140.97 48.26)
+    (at 171.45 50.8)
     (descr "Through hole angled pin header, 1x07, 2.54mm pitch, 6mm pin length, single row")
     (tags "Through hole angled pin header THT 1x07 2.54mm single row")
     (path /5E941799)
