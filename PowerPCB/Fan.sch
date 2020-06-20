@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -20,10 +20,10 @@ Wire Wire Line
 Text Notes 5650 5250 0    50   ~ 0
 *Relay: TE 1721081-5 (Coil Voltage 12VDC, Contact Current Rating 3 A)\n*.tran 100u 500m
 $Comp
-L Device:R R8
+L Device:R R16
 U 1 1 5E93960D
 P 1700 4450
-F 0 "R8" H 1770 4496 50  0000 L CNN
+F 0 "R16" H 1770 4496 50  0000 L CNN
 F 1 "100k" H 1770 4405 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1630 4450 50  0001 C CNN
 F 3 "~" H 1700 4450 50  0001 C CNN
@@ -77,10 +77,10 @@ VCC_12
 Text HLabel 4600 4550 0    50   Output ~ 0
 Fan-
 $Comp
-L power:GND #PWR01
+L power:GND #PWR027
 U 1 1 5ED21FDC
 P 4250 4600
-F 0 "#PWR01" H 4250 4350 50  0001 C CNN
+F 0 "#PWR027" H 4250 4350 50  0001 C CNN
 F 1 "GND" H 4255 4427 50  0000 C CNN
 F 2 "" H 4250 4600 50  0001 C CNN
 F 3 "" H 4250 4600 50  0001 C CNN

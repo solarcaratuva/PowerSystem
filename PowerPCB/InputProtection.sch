@@ -1,0 +1,156 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R17
+U 1 1 5EE2BE9C
+P 1400 1850
+AR Path="/5EE2B52D/5EE2BE9C" Ref="R17"  Part="1" 
+AR Path="/5EE3728E/5EE2BE9C" Ref="R19"  Part="1" 
+AR Path="/5EE40591/5EE2BE9C" Ref="R21"  Part="1" 
+F 0 "R21" V 1193 1850 50  0000 C CNN
+F 1 "10" V 1284 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1330 1850 50  0001 C CNN
+F 3 "~" H 1400 1850 50  0001 C CNN
+	1    1400 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 5EE2CD90
+P 2550 2250
+AR Path="/5EE2B52D/5EE2CD90" Ref="C13"  Part="1" 
+AR Path="/5EE3728E/5EE2CD90" Ref="C14"  Part="1" 
+AR Path="/5EE40591/5EE2CD90" Ref="C15"  Part="1" 
+F 0 "C15" H 2665 2296 50  0000 L CNN
+F 1 "10u" H 2665 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2588 2100 50  0001 C CNN
+F 3 "~" H 2550 2250 50  0001 C CNN
+	1    2550 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1650 1650 1850
+Wire Wire Line
+	1650 1850 1550 1850
+$Comp
+L Device:R R18
+U 1 1 5EE2F40D
+P 2150 1850
+AR Path="/5EE2B52D/5EE2F40D" Ref="R18"  Part="1" 
+AR Path="/5EE3728E/5EE2F40D" Ref="R20"  Part="1" 
+AR Path="/5EE40591/5EE2F40D" Ref="R22"  Part="1" 
+F 0 "R22" V 1943 1850 50  0000 C CNN
+F 1 "1k" V 2034 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 1850 50  0001 C CNN
+F 3 "~" H 2150 1850 50  0001 C CNN
+	1    2150 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 1850 1650 1850
+Connection ~ 1650 1850
+Wire Wire Line
+	1650 1950 1650 1850
+$Comp
+L power:GND #PWR028
+U 1 1 5EE31FD8
+P 1650 2700
+AR Path="/5EE2B52D/5EE31FD8" Ref="#PWR028"  Part="1" 
+AR Path="/5EE3728E/5EE31FD8" Ref="#PWR030"  Part="1" 
+AR Path="/5EE40591/5EE31FD8" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 1650 2450 50  0001 C CNN
+F 1 "GND" H 1655 2527 50  0000 C CNN
+F 2 "" H 1650 2700 50  0001 C CNN
+F 3 "" H 1650 2700 50  0001 C CNN
+	1    1650 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2700 1650 2550
+$Comp
+L power:GND #PWR029
+U 1 1 5EE33069
+P 2550 2700
+AR Path="/5EE2B52D/5EE33069" Ref="#PWR029"  Part="1" 
+AR Path="/5EE3728E/5EE33069" Ref="#PWR031"  Part="1" 
+AR Path="/5EE40591/5EE33069" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 2550 2450 50  0001 C CNN
+F 1 "GND" H 2555 2527 50  0000 C CNN
+F 2 "" H 2550 2700 50  0001 C CNN
+F 3 "" H 2550 2700 50  0001 C CNN
+	1    2550 2700
+	1    0    0    -1  
+$EndComp
+Text GLabel 1650 900  1    50   Input ~ 0
+VCC_3.3
+Wire Wire Line
+	1650 1050 1650 900 
+Text HLabel 1100 1850 0    50   Input ~ 0
+Vin
+Wire Wire Line
+	1100 1850 1250 1850
+Text HLabel 2800 1850 2    50   Output ~ 0
+ToSTM
+Wire Wire Line
+	2550 2400 2550 2700
+Wire Wire Line
+	2300 1850 2550 1850
+Wire Wire Line
+	2550 2100 2550 1850
+Connection ~ 2550 1850
+Wire Wire Line
+	2550 1850 2800 1850
+$Comp
+L SamacSys_Parts:SD0805S040S0R1 D9
+U 1 1 5EE57F4B
+P 1650 1850
+AR Path="/5EE3728E/5EE57F4B" Ref="D9"  Part="1" 
+AR Path="/5EE2B52D/5EE57F4B" Ref="D7"  Part="1" 
+AR Path="/5EE40591/5EE57F4B" Ref="D11"  Part="1" 
+F 0 "D11" V 2004 1978 50  0000 L CNN
+F 1 "SD0805S040S0R1" V 2095 1978 50  0000 L CNN
+F 2 "SamacSys_Parts:DIOM2013X100N" H 2150 2000 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/SD0805S040S0R1.pdf" H 2150 1900 50  0001 L CNN
+F 4 "Schottky Diodes & Rectifiers 40volts 0.1A SIZE 0805" H 2150 1800 50  0001 L CNN "Description"
+F 5 "1" H 2150 1700 50  0001 L CNN "Height"
+F 6 "581-SD0805S040S0R1" H 2150 1600 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/AVX/SD0805S040S0R1?qs=jCA%252BPfw4LHYgtNhiwPuw4Q%3D%3D" H 2150 1500 50  0001 L CNN "Mouser Price/Stock"
+F 8 "AVX" H 2150 1400 50  0001 L CNN "Manufacturer_Name"
+F 9 "SD0805S040S0R1" H 2150 1300 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1650 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:SD0805S040S0R1 D8
+U 1 1 5EE55C00
+P 1650 950
+AR Path="/5EE3728E/5EE55C00" Ref="D8"  Part="1" 
+AR Path="/5EE2B52D/5EE55C00" Ref="D6"  Part="1" 
+AR Path="/5EE40591/5EE55C00" Ref="D10"  Part="1" 
+F 0 "D10" V 2004 1078 50  0000 L CNN
+F 1 "SD0805S040S0R1" V 2095 1078 50  0000 L CNN
+F 2 "SamacSys_Parts:DIOM2013X100N" H 2150 1100 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/SD0805S040S0R1.pdf" H 2150 1000 50  0001 L CNN
+F 4 "Schottky Diodes & Rectifiers 40volts 0.1A SIZE 0805" H 2150 900 50  0001 L CNN "Description"
+F 5 "1" H 2150 800 50  0001 L CNN "Height"
+F 6 "581-SD0805S040S0R1" H 2150 700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/AVX/SD0805S040S0R1?qs=jCA%252BPfw4LHYgtNhiwPuw4Q%3D%3D" H 2150 600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "AVX" H 2150 500 50  0001 L CNN "Manufacturer_Name"
+F 9 "SD0805S040S0R1" H 2150 400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1650 950 
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
