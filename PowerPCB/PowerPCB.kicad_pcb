@@ -636,7 +636,7 @@
   )
 
   (module SamacSys_Parts:DIOM2013X100N (layer F.Cu) (tedit 5EE669A1) (tstamp 5EE73754)
-    (at 340.4 218.8 180)
+    (at 331.35 217.8 180)
     (descr 0805)
     (tags "Schottky Diode")
     (path /5EE40591/5EE57F4B)
