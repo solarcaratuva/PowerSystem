@@ -1,5 +1,3 @@
-View this project on [CADLAB.io](https://cadlab.io/project/23149). 
-
 # PowerSystem
 Developing PCB for Power System and ECU code for STM32F413ZH.
 
